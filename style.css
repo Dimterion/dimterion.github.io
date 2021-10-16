@@ -1,0 +1,39 @@
+.header {
+    background-color: rgb(179, 178, 201);
+    text-align: center;
+}
+
+.description {
+    font-size: 20px;
+    opacity: 0.75;
+    color:rgb(37, 40, 175)
+}
+
+h1 {
+    color:rgb(37, 40, 175)
+}
+
+h2 {
+    color: rgb(37, 40, 175);
+    text-align: center;
+}
+
+.photos {
+    text-align: center;
+    background-color: rgb(150, 143, 188);
+}
+
+body {
+    background-color: rgb(142, 153, 187);
+}
+
+h3 {
+    color: rgb(37, 40, 175);
+    text-align: center;
+}
+
+p {
+    color: rgb(37, 40, 175);
+    text-align: left;
+    font-size: 20px;
+}

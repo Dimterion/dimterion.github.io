@@ -4,13 +4,12 @@
   overflow: hidden;
   align-items: center;
   text-align: center;
-  background:
-    linear-gradient(
+  background: linear-gradient(
       to right,
       rgba($primary-color, 0.9),
       rgba($primary-color, 0.3)
     ),
-    url(Images/IMG_20210725_183621.jpg) center top;
+    url(Images/img-lake.jpg) center top;
   background-size: cover;
 
   &__name {

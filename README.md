@@ -1,6 +1,6 @@
 # My GitHub profile landing page
 
-A landing page with a short introduction and links to my GitHub and Twitter profiles.
+A landing page with a brief introduction and links to my profiles, projects and studies.
 
 ## Link to the page
 
@@ -8,4 +8,4 @@ A landing page with a short introduction and links to my GitHub and Twitter prof
 
 ## Built with
 
-HTML, CSS, SASS
+HTML, CSS, SASS, JavaScript, Prettier

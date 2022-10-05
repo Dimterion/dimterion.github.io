@@ -7,7 +7,6 @@
 
 .home {
   height: 100%;
-  padding-top: 30vh;
   overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -29,10 +28,6 @@
   color: #58cc60;
   font-weight: 700;
 }
-
-@media screen and (min-width: 768px) {
-  .home {
-    padding-top: 40vh;
   }
 }
 
@@ -47,11 +42,6 @@ body {
 h1, h2, h3 {
   font-weight: 400;
 }
-
-h3 {
-  margin: 3vw;
-}
-
 a {
   color: #fff;
   text-decoration: none;

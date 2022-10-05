@@ -1,27 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-    <section class="home">
-      <h2>Hi!</h2>
-      <h1 class="home__name">
-        I'm  Dmitrii (<span class="home__name--last">Dimterion</span>)
-      </h1>
-      <h2>
-
-      <div class="social-icons">
-        <a href="https://twitter.com/dimterion">
-          <i class="fab fa-twitter fa-2x"></i>
-        </a>
-        <a href="https://github.com/Dimterion">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
-      </div>
-      <footer>&copy; Copyright 2022</footer>
-    </section>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GitHub profile landing page of Dimterion, Web Developer."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="color-scheme" content="dark" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script
+      src="https://kit.fontawesome.com/d21300426d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Dimterion's GitHub Profile</title>
+  </head>
+  <body>
+    <header class="profileHeader">
+      <a href="#"><h1>Dimterion's GitHub Profile</h1></a>
+      <button
+        id="colorScheme-btn"
+        aria-label="Change color scheme"
+        onclick="changeColorScheme()"
+      >
+        <i class="fa-solid fa-lightbulb"></i>
+      </button>
+      <span class="top"></span>
+      <span class="right"></span>
+      <span class="bottom"></span>
+      <span class="left"></span>
+    </header>
+    <aside class="navBar">
+      <div class="bar"></div>
+      <ul class="menu">
+        <li><a href="#" class="active" id="link-1">Intro</a></li>
+        <li><a href="#projects" id="link-2">Projects</a></li>
+        <li><a href="#studies" id="link-3">Studies</a></li>
+        <li><a href="#contact" id="link-4">Contact</a></li>
+      </ul>
+    </aside>
+    <main>
+      <section id="intro" class="page-section">
+        <img
+          class="hero-img"
+          src="./assets/img-lake.jpg"
+          alt="Lake and trees"
+        />
+        <div>
+          <h2>Hi! I'm Dmitrii</h2>
+          <h3>
+            <i
+              >I'm interested in Web Development<br />(Front-End with a bit of
+              Back-end)</i
+            >
+          </h3>
+          <br />
+          <h4>This is my GitHub profile landing page</h4>
+          <p>
+            Here you can see the projects I worked on,<br />studies that I've
+            completed and my contact information
+          </p>
+        </div>
+      </section>
+      <section id="projects" class="page-section">
+        <img
+          class="hero-img"
+          src="./assets/img-park.jpg"
+          alt="Park with pond"
+        />
+        <h2>Projects</h2>
+        <p>
+          You can check
+          <a
+            class="link"
+            href="https://portfolio-site-dimterion.vercel.app/projects"
+            target="_blank"
+            rel="noopener noreferrer"
+            >the following table</a
+          ><br />
+          that shows all the projects I worked on so far
+        </p>
+        <p>
+          Or take a look at my
+          <a
+            class="link"
+            href="https://github.com/Dimterion"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub profile</a
+          >
+        </p>
+      </section>
+      <section id="studies" class="page-section">
+        <img
+          class="hero-img"
+          src="./assets/img-pond.jpg"
+          alt="Pond with swans and ducks"
+        />
+        <h2>Studies</h2>
+        <p>
+          I've finished the Front-End Developer course on the<br />
+          <a
+            class="link"
+            href="https://openclassrooms.com/paths/517-javascript-react-developer"
+            target="_blank"
+            rel="noopener noreferrer"
+            >OpenClassrooms platform</a
+          >
+        </p>
+        <p>
+          I've also completed<br />
+          <a
+            class="link"
+            href="https://www.udemy.com/course/react-front-to-back-2022/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >the following React Front to Back</a
+          >
+          course on Udemy
+        </p>
+      </section>
+      <section id="contact" class="page-section">
+        <img
+          class="hero-img"
+          src="./assets/img-forest.jpg"
+          alt="Path between the trees in the forest"
+        />
+        <h2>Contact</h2>
+        <p>
+          I'm currently present on
+          <a
+            class="link"
+            href="https://twitter.com/Dimterion"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Twitter</a
+          >
+        </p>
+        <p>
+          And I also write on
+          <a
+            class="link"
+            href="https://medium.com/@dimterion"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Medium</a
+          >
+          every Friday
+        </p>
+        <p>
+          My old profile page is
+          <a
+            class="link"
+            href="./Old version/index.html"
+            >here</a
+          >
+        </p>
+      </section>
+    </main>
+    <footer>
+      <a
+        id="gitHub-icon"
+        href="https://github.com/Dimterion"
+        aria-label="GitHub profile link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a
+        id="twitter-icon"
+        href="https://twitter.com/Dimterion"
+        aria-label="Twitter profile link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a
+        id="medium-icon"
+        href="https://medium.com/@dimterion"
+        aria-label="Medium profile link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-brands fa-medium"></i>
+      </a>
+    </footer>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>

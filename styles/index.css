@@ -9,7 +9,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: "Inter Tight", sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 0.5px;
   line-height: 2em;
 }
@@ -33,6 +33,21 @@ html {
 .page-section > * {
   text-align: center;
   margin: 1rem;
+}
+
+.text-block {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 1vw;
+}
+
+.text-block h3 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+}
+
+.text-block p {
+  margin-top: 2vh;
 }
 
 .link {

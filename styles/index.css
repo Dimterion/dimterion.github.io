@@ -35,6 +35,18 @@ html {
   margin: 1rem;
 }
 
+@media (max-height: 700px) {
+  .page-section {
+    margin: 5rem 0;
+  }
+}
+
+@media (max-height: 550px) {
+  .page-section {
+    margin: 10rem 0;
+  }
+}
+
 .text-block {
   border: 1px solid;
   border-radius: 5px;

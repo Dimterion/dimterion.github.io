@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Dimterion's Website</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,191 +12,229 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@500&display=swap"
       rel="stylesheet"
     />
-    <meta name="color-scheme" content="dark" />
-    <link rel="stylesheet" href="./styles/index.css" />
-    <script
-      src="https://kit.fontawesome.com/d21300426d.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Dimterion's GitHub Profile</title>
+    <link rel="stylesheet" type="text/css" href="./default.css" />
   </head>
   <body>
-    <header class="profileHeader">
-      <a href="/"><h1>Dimterion's GitHub Profile</h1></a>
-      <button
-        id="colorScheme-btn"
-        aria-label="Change color scheme"
-        onclick="changeColorScheme()"
-      >
-        <i class="fa-solid fa-lightbulb"></i>
-      </button>
-      <span class="top"></span>
-      <span class="right"></span>
-      <span class="bottom"></span>
-      <span class="left"></span>
-    </header>
-    <aside class="navBar">
-      <div class="bar"></div>
-      <ul class="menu">
-        <li><a href="#" class="active" id="link-1">Intro</a></li>
-        <li><a href="#projects" id="link-2">Projects</a></li>
-        <li><a href="#studies" id="link-3">Studies</a></li>
-        <li><a href="#contact" id="link-4">Contact</a></li>
-      </ul>
-    </aside>
-    <main>
-      <section id="intro" class="page-section">
-        <img
-          class="hero-img"
-          src="./assets/img-lake.jpg"
-          alt="Lake and trees"
-        />
-        <div class="text-block">
-          <h2>Hi! I'm Dmitrii</h2>
-          <h3>
-            <i
-              >I'm interested in Web Development<br />(Front-End with a bit of
-              Back-end)</i
-            >
-          </h3>
-          <br />
-          <h4>This is my GitHub profile landing page</h4>
-          <p>
-            Here you can see the projects I worked on,<br />studies that I've
-            completed and my contact information
-          </p>
+    <section class="s1">
+      <div class="main-container">
+        <div class="greeting-wrapper">
+          <h1>Hello, I'm Dmitrii</h1>
         </div>
-      </section>
-      <section id="projects" class="page-section">
-        <img
-          class="hero-img"
-          src="./assets/img-park.jpg"
-          alt="Park with pond"
-        />
-        <div class="text-block">
-          <h2>Projects</h2>
-          <p>
-            You can check
+        <div class="intro-wrapper">
+          <div class="nav-wrapper">
+            <div class="icon-wrapper">
+              <img
+                class="icon-avatar"
+                src="./images/avatar_icon.ico"
+                alt="Dimterion's avatar"
+              />
+            </div>
+            <ul id="navigation">
+              <li><a href="#">Contact (soon)</a></li>
+            </ul>
+          </div>
+          <div class="left-column">
+            <img
+              id="profile_pic"
+              src="./images/profile_picture.jpg"
+              alt="Dmitrii's profile picture"
+            />
+            <h5 style="text-align: center; line-height: 0">
+              Personalize Theme (soon)
+            </h5>
+            <div id="theme-options-wrapper">
+              <div id="light-mode" class="theme-dot"></div>
+              <div id="blue-mode" class="theme-dot"></div>
+            </div>
+            <p id="settings-note">
+              Choose you preferred<br />color scheme for the site
+            </p>
+          </div>
+          <div class="right-column">
+            <div id="preview-shadow">
+              <div id="preview">
+                <div id="corner-tl" class="corner"></div>
+                <div id="corner-tr" class="corner"></div>
+                <h3>What I Do</h3>
+                <p>
+                  I am Web Developer (Front-End). I mostly use React,
+                  JavaScript, CSS, HTML to build responsive web sites and
+                  applications.
+                </p>
+                <div id="corner-br" class="corner"></div>
+                <div id="corner-bl" class="corner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s2">
+      <div class="main-container">
+        <div class="about-wrapper">
+          <div class="about-me">
+            <h4>More about me</h4>
+            <p>
+              I'm currently working on polishing my portfolio and tidying up all
+              the projects and courses I've completed so far.
+            </p>
+            <p>
+              I like writing about my work / learning process, documenting
+              things that might be useful for me or even somebody else as well.
+            </p>
+            <hr />
+            <h4>TOP EXPERTISE</h4>
+            <p>
+              Front-End developer with primary focus on React:
+              <a
+                href="https://www.linkedin.com/in/dmitrii-p/"
+                target="_blank"
+                rel="noreferrer"
+                >LinkedIn profile</a
+              >
+            </p>
+            <div id="skills">
+              <ul>
+                <li>React</li>
+                <li>JavaScript</li>
+                <li>CSS</li>
+                <li>HTML</li>
+                <li>SASS</li>
+              </ul>
+              <ul>
+                <li>Bootstrap</li>
+                <li>Tailwind CSS</li>
+                <li>React Router</li>
+                <li>Node.js</li>
+                <li>Git</li>
+              </ul>
+            </div>
+          </div>
+          <div class="social-links">
+            <img
+              id="social_img"
+              src="./images/socials_image.png"
+              alt="Social media logos: GitHub, Twitter, Medium"
+            />
+            <h3>My GitHub / Twitter / Medium accounts</h3>
             <a
-              class="link"
-              href="https://portfolio-site-dimterion.vercel.app/projects"
-              target="_blank"
-              rel="noopener noreferrer"
-              >the following table</a
-            ><br />
-            that shows all the projects I worked on so far
-          </p>
-          <p>
-            Or take a look at my
-            <a
-              class="link"
               href="https://github.com/Dimterion"
               target="_blank"
-              rel="noopener noreferrer"
-              >GitHub profile</a
+              rel="noreferrer"
+              >GitHub: @Dimterion</a
             >
-          </p>
-        </div>
-      </section>
-      <section id="studies" class="page-section">
-        <img
-          class="hero-img"
-          src="./assets/img-pond.jpg"
-          alt="Pond with swans and ducks"
-        />
-        <div class="text-block">
-          <h2>Studies</h2>
-          <p>
-            I've finished the Front-End Developer course on the<br />
+            <br />
             <a
-              class="link"
-              href="https://openclassrooms.com/paths/517-javascript-react-developer"
-              target="_blank"
-              rel="noopener noreferrer"
-              >OpenClassrooms platform</a
-            >
-          </p>
-          <p>
-            I've also completed<br />
-            <a
-              class="link"
-              href="https://www.udemy.com/course/react-front-to-back-2022/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >the following React Front to Back</a
-            >
-            course on Udemy
-          </p>
-        </div>
-      </section>
-      <section id="contact" class="page-section">
-        <img
-          class="hero-img"
-          src="./assets/img-forest.jpg"
-          alt="Path between the trees in the forest"
-        />
-        <div class="text-block">
-          <h2>Contact</h2>
-          <p>
-            I'm currently present on
-            <a
-              class="link"
               href="https://twitter.com/Dimterion"
               target="_blank"
-              rel="noopener noreferrer"
-              >Twitter</a
+              rel="noreferrer"
+              >Twitter: @Dimterion</a
             >
-          </p>
-          <p>
-            And I also write on
+            <br />
             <a
-              class="link"
               href="https://medium.com/@dimterion"
               target="_blank"
-              rel="noopener noreferrer"
-              >Medium</a
+              rel="noreferrer"
+              >Medium: @Dimterion</a
             >
-            every Friday
-          </p>
-          <p>
-            My old profile page is
-            <a class="link" href="./old_profile_version/index.html">here</a>
-          </p>
+          </div>
         </div>
-      </section>
-    </main>
-    <footer>
-      <a
-        id="gitHub-icon"
-        href="https://github.com/Dimterion"
-        aria-label="GitHub profile link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a
-        id="twitter-icon"
-        href="https://twitter.com/Dimterion"
-        aria-label="Twitter profile link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="fa-brands fa-twitter"></i>
-      </a>
-      <a
-        id="medium-icon"
-        href="https://medium.com/@dimterion"
-        aria-label="Medium profile link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i class="fa-brands fa-medium"></i>
-      </a>
-    </footer>
-    <script src="./scripts/index.js"></script>
+      </div>
+    </section>
+    <section class="s1">
+      <div class="main-container">
+        <h3 style="text-align: center">Some of my Projects</h3>
+        <div class="post-wrapper">
+          <div>
+            <div class="post">
+              <img
+                class="thumbnail"
+                src="./images/crypto_finder_project_image.png"
+              />
+              <div class="post-preview">
+                <h6 class="post-title">Crypto Finder</h6>
+                <p class="post-intro">
+                  An application to search for crypto currencies and get main
+                  information about them.
+                </p>
+                <a
+                  href="https://github.com/Dimterion/Finder-app"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="post">
+              <img
+                class="thumbnail"
+                src="./images/portfolio_site_project_image.png"
+              />
+              <div class="post-preview">
+                <h6 class="post-title">Portfolio Site Built with React</h6>
+                <p class="post-intro">
+                  A web site storing information about most of my projects and
+                  studies built out of examples from React Docs.
+                </p>
+                <a
+                  href="https://github.com/Dimterion/Portfolio-site"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="post">
+              <img class="thumbnail" src="./images/react_projects_image.png" />
+              <div class="post-preview">
+                <h6 class="post-title">React Projects Site</h6>
+                <p class="post-intro">
+                  A web site with several particular React-related projects I've
+                  made while doing one of the courses.
+                </p>
+                <a
+                  href="https://github.com/Dimterion/React-projects"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s2">
+      <div class="main-container">Contact (soon)</div>
+    </section>
+    <section>
+      <p>
+        My very first profile page can be seen
+        <a
+          class="link"
+          href="./old_profile_version/index.html"
+          target="_blank"
+          rel="noreferrer"
+          >here</a
+        >
+      </p>
+      <p>
+        And my previous profile page is
+        <a
+          class="link"
+          href="./previous_profile/index.html"
+          target="_blank"
+          rel="noreferrer"
+          >here</a
+        >
+      </p>
+    </section>
   </body>
 </html>

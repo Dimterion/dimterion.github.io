@@ -434,3 +434,18 @@ h6 {
     padding-top: 10px;
   }
 }
+
+/* Thank You Page - additional styling */
+#thankYouPage-container {
+  background-color: var(--secondaryColor);
+  text-align: center;
+}
+
+#thankYouPage-content {
+  margin-top: 30vh;
+}
+
+#thankYouPage-content p,
+a {
+  font-size: 1.25rem;
+}

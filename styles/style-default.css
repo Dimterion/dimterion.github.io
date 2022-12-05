@@ -278,6 +278,10 @@ h6 {
   background-color: var(--previewShadow);
 }
 
+#skills ul {
+  padding: 0 10px;
+}
+
 .social-links {
   display: grid;
   align-content: center;
@@ -364,6 +368,7 @@ h6 {
   border-radius: 5px;
   border: 1px solid var(--borderColor);
   font-size: 15px;
+  text-indent: 5px;
 }
 
 #submit-btn {

@@ -34,7 +34,7 @@
               />
             </div>
             <ul id="navigation">
-              <li><a href="#contact-link">Contact</a></li>
+              <li><a href="#contact-form">Contact</a></li>
             </ul>
           </div>
           <div class="left-column">
@@ -217,47 +217,74 @@
         </div>
       </div>
     </section>
-    <!-- TO BE ADDED -->
-
-    <!-- <section class="s2">
-      <div class="main-container">Contact (soon)</div>
+    <section class="s2">
       <div class="main-container">
         <h3 style="text-align: center">Get In Touch</h3>
-        <form id="contact-form">
+        <form
+          id="contact-form"
+          action="https://formsubmit.co/webdevres@protonmail.com"
+          method="POST"
+        >
           <label>Name</label>
-          <input class="input-field" type="text" name="name" />
+          <input
+            class="input-field"
+            type="text"
+            name="name"
+            placeholder="Your name"
+            minlength="1"
+            maxlength="30"
+            required
+          />
           <label>Subject</label>
-          <input class="input-field" type="text" name="subject" />
+          <input
+            class="input-field"
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            minlength="4"
+            maxlength="30"
+            required
+          />
           <label>Email</label>
-          <input class="input-field" type="text" name="email" />
+          <input
+            class="input-field"
+            type="text"
+            name="email"
+            placeholder="Your email address"
+            pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+            title="Example: emailname@emailprovider.com"
+            maxlength="50"
+            required
+          />
           <label>Message</label>
-          <textarea class="input-field" name="message"></textarea>
+          <textarea
+            class="input-field"
+            name="message"
+            placeholder="Type your message here"
+            minlength="10"
+            required
+          ></textarea>
           <input id="submit-btn" type="submit" value="Send" />
         </form>
       </div>
-    </section> -->
-
-    <!-- TO BE ADDED -->
+    </section>
     <section class="s3">
       <p>
-        My very first profile page can be seen
+        My first profile page version can be seen
         <a
           class="link"
           href="./old_profile_version/index.html"
           target="_blank"
           rel="noreferrer"
           >here</a
-        >
-      </p>
-      <p>
-        And my previous profile page is
+        >. And my previous profile page version is
         <a
           class="link"
           href="./previous_profile/index.html"
           target="_blank"
           rel="noreferrer"
           >here</a
-        >
+        >.
       </p>
     </section>
     <script type="text/javascript" src="./scripts/script.js"></script>

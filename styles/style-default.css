@@ -225,6 +225,7 @@ h6 {
   height: 200px;
   padding-left: 30px;
   padding-top: 30px;
+  border-radius: 5px;
 }
 
 #preview {
@@ -276,6 +277,7 @@ h6 {
   display: flex;
   justify-content: space-evenly;
   background-color: var(--previewShadow);
+  border-radius: 5px;
 }
 
 #skills ul {
@@ -380,6 +382,11 @@ h6 {
   background-color: var(--buttonColor);
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  opacity: 0.8;
 }
 
 .icon-wrapper {
@@ -436,16 +443,27 @@ h6 {
 }
 
 /* Thank You Page - additional styling */
-#thankYouPage-container {
+
+#thanksPage-container {
   background-color: var(--secondaryColor);
   text-align: center;
 }
 
-#thankYouPage-content {
+#thanksPage-content {
   margin-top: 30vh;
 }
 
-#thankYouPage-content p,
-a {
+#thanksPage-content p {
   font-size: 1.25rem;
+}
+
+#thanksPage-content a {
+  font-size: 1.5rem;
+}
+
+/* Projects Pages - additional styling */
+
+#projectPage-container {
+  background-color: var(--secondaryColor);
+  text-align: center;
 }

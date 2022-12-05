@@ -1,3 +1,4 @@
+// Color scheme change
 let theme = localStorage.getItem("theme");
 
 if (theme === null) {
@@ -35,4 +36,27 @@ function setTheme(mode) {
 
     localStorage.setItem("theme", mode);
   }
+}
+
+// Scroll to top button
+let button = document.getElementById("top-Btn");
+
+window.onscroll = function () {
+  showScrollBtn();
+};
+
+function showScrollBtn() {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    button.style.display = "block";
+  } else {
+    button.style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }

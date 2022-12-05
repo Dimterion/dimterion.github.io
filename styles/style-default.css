@@ -404,6 +404,53 @@ h6 {
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+/* Scroll To Top Button - styling */
+#top-Btn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 99;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  background-color: var(--buttonColor);
+  color: var(--secondaryColor);
+  cursor: pointer;
+  padding: 5px 10px 0;
+  border-radius: 5px;
+}
+
+#top-Btn:hover {
+  opacity: 0.8;
+}
+
+/* Thank You Page - additional styling */
+#thanksPage-container {
+  background-color: var(--secondaryColor);
+  text-align: center;
+}
+
+#thanksPage-content {
+  margin-top: 30vh;
+}
+
+#thanksPage-content p {
+  font-size: 1.25rem;
+}
+
+#thanksPage-content a {
+  font-size: 1.5rem;
+}
+
+/* Projects Pages - additional styling */
+#projectPage-container {
+  background-color: var(--secondaryColor);
+  text-align: center;
+}
+
+/* Responsive design adjustments */
 @media screen and (max-width: 1200px) {
   .main-container {
     width: 95%;
@@ -440,30 +487,8 @@ h6 {
     padding-left: 10px;
     padding-top: 10px;
   }
-}
 
-/* Thank You Page - additional styling */
-
-#thanksPage-container {
-  background-color: var(--secondaryColor);
-  text-align: center;
-}
-
-#thanksPage-content {
-  margin-top: 30vh;
-}
-
-#thanksPage-content p {
-  font-size: 1.25rem;
-}
-
-#thanksPage-content a {
-  font-size: 1.5rem;
-}
-
-/* Projects Pages - additional styling */
-
-#projectPage-container {
-  background-color: var(--secondaryColor);
-  text-align: center;
+  #top-Btn {
+    right: 10px;
+  }
 }

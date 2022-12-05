@@ -16,11 +16,23 @@ for (let i = 0; themeDots.length > i; i++) {
 }
 
 function setTheme(mode) {
-  if (mode === "light") {
-    document.getElementById("theme-style").href = "./styles/style-default.css";
-  } else {
-    document.getElementById("theme-style").href = "./styles/theme-blue.css";
-  }
+  if (document.title === "Dimterion's Website") {
+    if (mode === "light") {
+      document.getElementById("theme-style").href =
+        "./styles/style-default.css";
+    } else {
+      document.getElementById("theme-style").href = "./styles/theme-blue.css";
+    }
 
-  localStorage.setItem("theme", mode);
+    localStorage.setItem("theme", mode);
+  } else {
+    if (mode === "light") {
+      document.getElementById("theme-style").href =
+        "../styles/style-default.css";
+    } else {
+      document.getElementById("theme-style").href = "../styles/theme-blue.css";
+    }
+
+    localStorage.setItem("theme", mode);
+  }
 }

@@ -418,7 +418,7 @@ h6 {
   background-color: var(--buttonColor);
   color: var(--secondaryColor);
   cursor: pointer;
-  padding: 5px 10px 0;
+  padding: 0 10px 5px;
   border-radius: 5px;
 }
 
@@ -504,7 +504,6 @@ h6 {
   .project-image {
     width: 270px;
     height: 180px;
-    margin: auto;
   }
 }
 

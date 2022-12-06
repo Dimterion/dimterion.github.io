@@ -296,7 +296,7 @@ h6 {
 
 .post-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 250px);
+  grid-template-columns: repeat(auto-fit, 270px);
   gap: 20px;
   justify-content: center;
   padding-bottom: 30px;
@@ -339,7 +339,7 @@ h6 {
 .post-intro {
   color: #4b5156;
   font-size: 15px;
-  height: 120px;
+  height: 100px;
 }
 
 #contact-form {
@@ -447,7 +447,37 @@ h6 {
 /* Projects Pages - additional styling */
 #projectPage-container {
   background-color: var(--secondaryColor);
-  text-align: center;
+}
+
+#project-section {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 3vh 2vw;
+}
+
+#project-section > h2 {
+  margin: 2vh 0 1vh;
+}
+
+#project-section > a {
+  font-size: 1.2rem;
+  margin-bottom: 3vh;
+}
+
+#project-section > ul {
+  list-style: disc;
+  margin: 0;
+}
+
+#project-section > ul > li {
+  margin-top: 10px;
+}
+
+.project-image {
+  width: 550px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 /* Responsive design adjustments */
@@ -469,6 +499,12 @@ h6 {
   .right-column {
     justify-content: center;
     padding-bottom: 80px;
+  }
+
+  .project-image {
+    width: 270px;
+    height: 180px;
+    margin: auto;
   }
 }
 

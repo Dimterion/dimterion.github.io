@@ -17,7 +17,7 @@ for (let i = 0; themeDots.length > i; i++) {
 }
 
 function setTheme(mode) {
-  if (document.title === "Dimterion's Website") {
+  if (document.title === "Dimterion's Profile") {
     if (mode === "light") {
       document.getElementById("theme-style").href =
         "./styles/style-default.css";

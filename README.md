@@ -1,6 +1,6 @@
 # My GitHub profile landing page
 
-A landing page with a brief introduction and links to my profiles, projects and studies.
+A landing page with a brief introduction and links to my profiles, projects, studies and contacts.
 
 ## Link to the page
 

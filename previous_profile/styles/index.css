@@ -15,8 +15,8 @@ html {
 }
 
 .hero-img {
-  width: 50vw;
-  height: 400px;
+  width: 40vw;
+  height: 350px;
   display: block;
   object-fit: cover;
   border-radius: 3px;

@@ -1,11 +1,11 @@
-# My GitHub profile landing page
+# Dimterion's Profile Site on GitHub
 
-A landing page with a brief introduction and links to my profiles, projects, studies and contacts.
+My main profile site on GitHub with a brief introduction and links to my other profiles, projects, studies and contacts.
 
-## Link to the page
+## Site Link
 
-[My GitHub profile landing page](https://dimterion.github.io/)
+[Dimterion's profile site](https://dimterion.github.io/)
 
 ## Built with
 
-HTML, CSS, SASS, JavaScript, Prettier
+HTML, CSS/SASS, JavaScript, Prettier

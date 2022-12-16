@@ -1,0 +1,173 @@
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Color scheme depending on the system settings for each user */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --mainTextColor: #000;
+    --secondaryTextColor: rgb(51 51 51);
+    --mainLinkColor: #0da2b8;
+    --mainBorderColor: rgb(218, 218, 218);
+    --mainBgColor: rgb(249, 250, 251);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mainTextColor: #fff;
+    --secondaryTextColor: #adb0b1;
+    --mainLinkColor: rgb(30, 190, 214);
+    --mainBorderColor: #2b3031;
+    --mainBgColor: #131415;
+  }
+}
+
+/* Main styling */
+
+* {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5em;
+  box-sizing: border-box;
+  color: var(--mainTextColor);
+}
+
+body {
+  background-color: var(--mainBgColor);
+}
+
+p,
+span,
+li {
+  color: var(--secondaryTextColor);
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--mainLinkColor);
+  font-size: 1.1em;
+}
+
+li {
+  line-height: 1.9em;
+}
+
+#container--main {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section--page {
+  padding: 1em 0;
+}
+
+#wrapper--hero {
+  display: flex;
+  align-items: center;
+  gap: 4em;
+}
+
+#user-name {
+  font-size: 2.5em;
+  line-height: 1em;
+}
+
+#bio,
+a {
+  font-weight: 300;
+}
+
+#profile-pic {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+#email {
+  color: var(--mainTextColor);
+}
+
+#socials--list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1em;
+  flex-wrap: wrap;
+}
+
+#socials--list a {
+  color: var(--secondaryTextColor);
+  transition: 0.5s;
+}
+
+#socials--list a:hover {
+  color: var(--mainLinkColor);
+  transition: 0.5s;
+}
+
+#qualifications--list {
+  list-style: none;
+}
+
+#wrapper--techstack__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  font-size: 0.9em;
+}
+
+.card--techstack {
+  border: 1px solid var(--mainBorderColor);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.card--work-history {
+  border-left: 1px solid var(--mainBorderColor);
+  border-right: 1px solid var(--mainBorderColor);
+  margin: 3em 0;
+  padding: 0 2em;
+}
+
+.line-break {
+  background-color: var(--mainBorderColor);
+  height: 1px;
+}
+
+.card--project {
+  padding: 1em 0;
+  border-top: 1px solid var(--mainBorderColor);
+}
+
+.card--project a {
+  color: var(--mainTextColor);
+  transition: 0.5s;
+}
+
+.card--project a:hover {
+  color: var(--mainLinkColor);
+}
+
+@media (max-width: 600px) {
+  #wrapper--hero {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  #profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .section-page {
+    padding: 1em 0;
+  }
+
+  .card--work-history {
+    border-left: none;
+    border-right: none;
+    padding: 0;
+  }
+}

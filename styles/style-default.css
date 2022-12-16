@@ -273,6 +273,12 @@ h6 {
   gap: 10px;
 }
 
+.fa-brands.fa-linkedin,
+.fa-solid.fa-file-pdf,
+.fa-solid.fa-address-card {
+  font-size: 1.25rem;
+}
+
 #skills {
   display: flex;
   justify-content: space-evenly;

@@ -481,9 +481,10 @@ h6 {
 
 .project-image {
   width: 550px;
-  height: 350px;
+  height: 360px;
   object-fit: cover;
   border-radius: 5px;
+  border: 2px solid var(--borderColor);
 }
 
 /* Responsive design adjustments */
@@ -514,6 +515,10 @@ h6 {
 }
 
 @media screen and (max-width: 400px) {
+  h2 {
+    font-size: 34px;
+  }
+
   .left-column {
     padding-bottom: 15px;
   }
@@ -531,5 +536,9 @@ h6 {
 
   #top-Btn {
     right: 10px;
+  }
+
+  #project-section {
+    margin: 3vh 1vw;
   }
 }

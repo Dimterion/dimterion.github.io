@@ -410,11 +410,23 @@ h6 {
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+#portal {
+  color: black;
+  cursor: auto;
+  font-size: 12px;
+  transition: 0.5s;
+}
+
+#portal:hover {
+  color: gold;
+  transition: 0.5s;
+}
+
 /* Scroll To Top Button - styling */
 #top-Btn {
   display: none;
   position: fixed;
-  bottom: 10px;
+  bottom: 40px;
   right: 20px;
   z-index: 99;
   font-size: 1.25rem;
@@ -426,6 +438,7 @@ h6 {
   cursor: pointer;
   padding: 0 10px 5px;
   border-radius: 5px;
+  opacity: 0.7;
 }
 
 #top-Btn:hover {

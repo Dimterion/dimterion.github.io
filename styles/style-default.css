@@ -100,10 +100,10 @@ h6 {
 }
 
 .s3 {
-  background-color: var(--secondaryColor);
+  background-color: var(--mainColor);
   border-bottom: 1px solid var(--borderColor);
   overflow: auto;
-  padding: 10px;
+  padding: 0 10px;
 }
 
 .main-container {

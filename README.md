@@ -1,6 +1,6 @@
 # Dimterion's Profile Site on GitHub
 
-My main profile site on GitHub with a brief introduction and links to my other profiles, projects, studies and contacts.
+My main profile site on GitHub with a brief introduction and links to my other profiles, projects, studies, resume and contacts.
 
 ## Site Link
 

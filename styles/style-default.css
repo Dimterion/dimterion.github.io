@@ -410,18 +410,6 @@ h6 {
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-#portal {
-  color: black;
-  cursor: auto;
-  font-size: 12px;
-  transition: 0.5s;
-}
-
-#portal:hover {
-  color: gold;
-  transition: 0.5s;
-}
-
 /* Scroll To Top Button - styling */
 #top-Btn {
   display: none;

@@ -311,6 +311,7 @@ h6 {
 .post {
   border: 2px solid var(--borderColor);
   border-radius: 5px;
+  cursor: default;
 
   -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
@@ -318,9 +319,9 @@ h6 {
 }
 
 .post:hover {
-  -webkit-box-shadow: 3px 3px 5px 0px var(--postShadow);
-  -moz-box-shadow: 3px 3px 5px 0px var(--postShadow);
-  box-shadow: 3px 3px 5px 0px var(--postShadow);
+  -webkit-box-shadow: 2px 2px 5px 0px var(--postShadow);
+  -moz-box-shadow: 2px 2px 5px 0px var(--postShadow);
+  box-shadow: 2px 2px 5px 0px var(--postShadow);
 }
 
 .thumbnail {
@@ -335,6 +336,14 @@ h6 {
 .post-preview {
   background-color: #fff;
   padding: 15px;
+}
+
+.post-preview a {
+  font-size: 17px;
+}
+
+.post-preview a:hover {
+  text-decoration: underline;
 }
 
 .post-title {

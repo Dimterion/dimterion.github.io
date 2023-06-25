@@ -106,9 +106,17 @@ h6 {
   padding: 0 10px;
 }
 
+.s3 a:hover {
+  text-decoration: underline;
+}
+
 .main-container {
   width: 1200px;
   margin: 0 auto;
+}
+
+.main-container a:hover {
+  text-decoration: underline;
 }
 
 .greeting-wrapper {

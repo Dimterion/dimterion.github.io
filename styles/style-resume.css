@@ -79,6 +79,10 @@ a {
   font-weight: 300;
 }
 
+#bio a:hover {
+  text-decoration: underline;
+}
+
 #profile-pic {
   border-radius: 50%;
   width: 150px;
@@ -88,6 +92,12 @@ a {
 
 #email {
   color: var(--mainTextColor);
+  transition: 0.5s;
+}
+
+#email:hover {
+  color: var(--mainLinkColor);
+  transition: 0.5s;
 }
 
 #socials--list {
@@ -100,6 +110,8 @@ a {
 #socials--list a {
   color: var(--secondaryTextColor);
   transition: 0.5s;
+  border-bottom: 1px solid var(--mainBorderColor);
+  padding: 1px;
 }
 
 #socials--list a:hover {
@@ -148,6 +160,14 @@ a {
 
 .card--project a:hover {
   color: var(--mainLinkColor);
+}
+
+.card--work-history a:hover {
+  text-decoration: underline;
+}
+
+#work-history-wrapper a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {

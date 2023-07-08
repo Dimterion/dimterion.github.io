@@ -209,6 +209,10 @@ h6 {
   box-shadow: 3px 3px 5px 0px var(--themeDotShadow);
 }
 
+.theme-dot:active {
+  scale: 0.9;
+}
+
 #light-mode {
   background-color: #fff;
 }
@@ -413,7 +417,11 @@ h6 {
 }
 
 #submit-btn:hover {
-  opacity: 0.8;
+  opacity: 0.9;
+}
+
+#submit-btn:active {
+  scale: 0.9;
 }
 
 .icon-wrapper {
@@ -452,6 +460,10 @@ h6 {
 
 #top-Btn:hover {
   opacity: 0.8;
+}
+
+#top-Btn:active {
+  scale: 0.9;
 }
 
 /* Thank You Page - additional styling */

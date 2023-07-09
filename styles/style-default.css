@@ -131,9 +131,9 @@ h6 {
   border: 1px solid var(--borderColor);
   border-radius: 5px 5px 0 0;
 
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 5px 0px var(--postShadow);
+  -moz-box-shadow: 1px 1px 5px 0px var(--postShadow);
+  box-shadow: 1px 1px 5px 0px var(--postShadow);
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -329,9 +329,9 @@ h6 {
   border-radius: 5px;
   cursor: default;
 
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 5px 0px var(--postShadow);
+  -moz-box-shadow: 1px 1px 5px 0px var(--postShadow);
+  box-shadow: 1px 1px 5px 0px var(--postShadow);
 }
 
 .post:hover {
@@ -434,9 +434,13 @@ h6 {
   object-fit: cover;
   margin: 5px;
 
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 5px 0px var(--postShadow);
+  -moz-box-shadow: 1px 1px 5px 0px var(--postShadow);
+  box-shadow: 1px 1px 5px 0px var(--postShadow);
+}
+
+.icon-avatar:hover {
+  opacity: 0.8;
 }
 
 /* Scroll To Top Button - styling */

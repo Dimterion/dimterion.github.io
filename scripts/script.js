@@ -60,3 +60,6 @@ function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// Footer year
+document.getElementById("year").textContent = new Date().getFullYear();

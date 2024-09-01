@@ -79,7 +79,8 @@ a {
   font-weight: 300;
 }
 
-#bio a:hover {
+#bio a:hover,
+#qualifications--list a:hover {
   text-decoration: underline;
 }
 
@@ -116,6 +117,7 @@ a {
 
 #socials--list a:hover {
   color: var(--mainLinkColor);
+  border-bottom: 1px solid var(--mainLinkColor);
   transition: 0.5s;
 }
 

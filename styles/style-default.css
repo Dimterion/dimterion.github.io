@@ -313,6 +313,11 @@ h6 {
   text-align: center;
 }
 
+.social-links a {
+  max-width: fit-content;
+  margin: auto;
+}
+
 #social_img {
   width: 100%;
 }

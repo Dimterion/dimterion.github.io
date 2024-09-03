@@ -290,6 +290,10 @@ h6 {
   gap: 10px;
 }
 
+.resume-links {
+  margin-bottom: 25px;
+}
+
 .fa-brands.fa-linkedin,
 .fa-solid.fa-file-pdf,
 .fa-solid.fa-address-card {
@@ -316,6 +320,7 @@ h6 {
 .social-links a {
   max-width: fit-content;
   margin: auto;
+  font-size: 17px;
 }
 
 #social_img {

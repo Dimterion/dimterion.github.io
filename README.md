@@ -4,7 +4,7 @@
 
 # GitHub Profile
 
-HTML / CSS / JavaScript web site
+HTML / CSS / JavaScript website
 
 ## 📋 Table of Contents
 
@@ -17,7 +17,7 @@ HTML / CSS / JavaScript web site
 
 ## <a id="introduction"></a>🔎 Introduction
 
-GitHub Profile is a web site displaying my projects and contact information.
+GitHub Profile is a website displaying my projects and contact information.
 
 ## <a id="features"></a>📌 Features
 

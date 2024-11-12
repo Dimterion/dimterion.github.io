@@ -91,12 +91,14 @@ a {
   object-fit: cover;
 }
 
-#email {
+#email,
+#website {
   color: var(--mainTextColor);
   transition: 0.5s;
 }
 
-#email:hover {
+#email:hover,
+#website:hover {
   color: var(--mainLinkColor);
   transition: 0.5s;
 }

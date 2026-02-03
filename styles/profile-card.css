@@ -1,6 +1,119 @@
 * {
-  background-color: black;
-  box-sizing: border-box;
-  color: white;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    sans-serif;
+  background: linear-gradient(135deg, #000814 0%, #1d2d44 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #333;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.top-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 40px 30px 30px;
+}
+
+.name {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.bio {
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.personal-link {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.personal-link img {
+  width: 100%;
+  max-width: 250px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.personal-link img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.link-item {
+  display: block;
+  padding: 15px 25px;
+  background: #f8f9fa;
+  color: #333;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.link-item:hover {
+  background: white;
+  color: #007bff;
+  border-color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+}
+
+.link-item i {
+  font-size: 1.3em;
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    margin: 10px;
+  }
+
+  .content {
+    padding: 30px 20px 20px;
+  }
 }

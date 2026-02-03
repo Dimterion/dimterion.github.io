@@ -117,3 +117,37 @@ body {
     padding: 30px 20px 20px;
   }
 }
+
+.share-section {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: #f8f9fa;
+  color: #666;
+  border: 2px solid #eee;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1em;
+  width: 100%;
+}
+
+.share-btn:hover {
+  background: #e9ecef;
+  border-color: #ddd;
+  color: #333;
+}
+
+.share-btn.copied {
+  background: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}

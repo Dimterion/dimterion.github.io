@@ -13,7 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 5px;
   color: #333;
 }
 
@@ -54,13 +54,14 @@ body {
 
 .personal-link {
   display: block;
+}
+
+pre {
   margin-bottom: 30px;
 }
 
 .personal-link img {
   width: 100%;
-  max-width: 250px;
-  height: 80px;
   object-fit: cover;
   border-radius: 15px;
   transition:

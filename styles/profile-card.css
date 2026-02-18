@@ -14,7 +14,7 @@ body {
     sans-serif;
   justify-content: center;
   min-height: 100vh;
-  padding: 5px;
+  padding: 15px;
 }
 
 .profileCard-main {
@@ -35,7 +35,7 @@ body {
 }
 
 .profileCard-section {
-  padding: 30px;
+  padding: 20px;
 }
 
 .profileCard-h1 {
@@ -56,7 +56,8 @@ body {
   display: block;
 }
 
-pre {
+.profileCard-imgDescription {
+  font-size: 0.75rem;
   margin-bottom: 30px;
 }
 
@@ -74,13 +75,7 @@ pre {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.link-item {
+.profileCard-link {
   display: block;
   padding: 15px 25px;
   background: #f8f9fa;
@@ -95,9 +90,10 @@ pre {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  margin-bottom: 20px;
 }
 
-.link-item:hover {
+.profileCard-link:hover {
   background: white;
   color: #007bff;
   border-color: #007bff;
@@ -105,23 +101,8 @@ pre {
   box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
 }
 
-.link-item i {
+.profileCard-link i {
   font-size: 1.3em;
-}
-
-@media (max-width: 480px) {
-  .profileCard-main {
-    margin: 10px;
-  }
-
-  .profileCard-section {
-    padding: 20px;
-  }
-}
-
-.share-section {
-  border-top: 1px solid #eee;
-  padding-top: 20px;
 }
 
 .share-btn {

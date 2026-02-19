@@ -28,7 +28,7 @@ body {
   width: 100%;
 }
 
-.top-image {
+.profileCard-mainImg {
   height: 300px;
   object-fit: cover;
   width: 100%;
@@ -45,14 +45,14 @@ body {
   margin-bottom: 10px;
 }
 
-.bio {
+.profileCard-bio {
+  color: #666;
   font-size: 1.1em;
   line-height: 1.5;
-  color: #666;
   margin-bottom: 30px;
 }
 
-.personal-link {
+.profileCard-mainLink {
   display: block;
 }
 
@@ -61,74 +61,73 @@ body {
   margin-bottom: 30px;
 }
 
-.personal-link img {
-  width: 100%;
-  object-fit: cover;
+.profileCard-mainLink img {
   border-radius: 15px;
+  object-fit: cover;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-}
-
-.personal-link img:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.profileCard-link {
-  display: block;
-  padding: 15px 25px;
-  background: #f8f9fa;
-  color: #333;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: 500;
-  font-size: 1.1em;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-
-.profileCard-link:hover {
-  background: white;
-  color: #007bff;
-  border-color: #007bff;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
-}
-
-.profileCard-link i {
-  font-size: 1.3em;
-}
-
-.share-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 12px 20px;
-  background: #f8f9fa;
-  color: #666;
-  border: 2px solid #eee;
-  border-radius: 50px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1em;
   width: 100%;
 }
 
-.share-btn:hover {
+.profileCard-mainLink img:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.profileCard-socialLink {
+  align-items: center;
+  background: #f8f9fa;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  color: #333;
+  display: flex;
+  font-size: 1.1em;
+  font-weight: 500;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 15px 25px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.profileCard-socialLink:hover {
+  background: white;
+  border-color: #007bff;
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+  color: #007bff;
+  transform: translateY(-2px);
+}
+
+.profileCard-socialLink i {
+  font-size: 1.3em;
+}
+
+.profileCard-btn {
+  align-items: center;
+  background: #f8f9fa;
+  border: 2px solid #eee;
+  border-radius: 50px;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  font-size: 1em;
+  font-weight: 500;
+  gap: 10px;
+  justify-content: center;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.profileCard-btn:hover {
   background: #e9ecef;
   border-color: #ddd;
   color: #333;
 }
 
-.share-btn.copied {
+.profileCard-btn.copied {
   background: #d4edda;
   border-color: #c3e6cb;
   color: #155724;

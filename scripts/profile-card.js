@@ -3,7 +3,7 @@ function copyLink() {
   navigator.clipboard
     .writeText(currentUrl)
     .then(function () {
-      const btn = document.querySelector(".share-btn");
+      const btn = document.querySelector(".profileCard-btn");
       btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
       btn.classList.add("copied");
 
@@ -21,7 +21,7 @@ function copyLink() {
       document.execCommand("copy");
       document.body.removeChild(textArea);
 
-      const btn = document.querySelector(".share-btn");
+      const btn = document.querySelector(".profileCard-btn");
       btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
       btn.classList.add("copied");
 

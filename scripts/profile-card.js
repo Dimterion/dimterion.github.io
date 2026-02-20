@@ -1,33 +1,41 @@
 function copyLink() {
+  const copyLinkBtn = document.querySelector(".profileCard-btn");
   const currentUrl = window.location.href;
-  navigator.clipboard
-    .writeText(currentUrl)
-    .then(function () {
-      const btn = document.querySelector(".profileCard-btn");
-      btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-      btn.classList.add("copied");
+  const originalBtnContent = copyLinkBtn.innerHTML;
 
-      setTimeout(() => {
-        btn.innerHTML = '<i class="fas fa-share-alt"></i> Share';
-        btn.classList.remove("copied");
-      }, 2000);
-    })
-    .catch(function (err) {
-      const textArea = document.createElement("textarea");
-      textArea.value = currentUrl;
-      document.body.appendChild(textArea);
-      textArea.focus();
-      textArea.select();
+  function updateBtnText() {
+    copyLinkBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+    copyLinkBtn.classList.add("copied");
+
+    setTimeout(() => {
+      copyLinkBtn.innerHTML = originalBtnContent;
+      copyLinkBtn.classList.remove("copied");
+    }, 2000);
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard
+      .writeText(currentUrl)
+      .then(updateBtnText)
+      .catch((err) => console.error("Could not copy page link.", err));
+  } else {
+    const textArea = document.createElement("textarea");
+
+    textArea.value = currentUrl;
+    textArea.style.position = "fixed";
+    textArea.style.left = "-9999px";
+
+    document.body.appendChild(textArea);
+
+    textArea.select();
+
+    try {
       document.execCommand("copy");
-      document.body.removeChild(textArea);
+      updateVisuals();
+    } catch (err) {
+      console.error("Could not copy page link.", err);
+    }
 
-      const btn = document.querySelector(".profileCard-btn");
-      btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-      btn.classList.add("copied");
-
-      setTimeout(() => {
-        btn.innerHTML = '<i class="fas fa-share-alt"></i> Share';
-        btn.classList.remove("copied");
-      }, 2000);
-    });
+    document.body.removeChild(textArea);
+  }
 }

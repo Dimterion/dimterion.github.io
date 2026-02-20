@@ -2,6 +2,7 @@
   --backgroundPrimary: #000814;
   --backgroundSecondary: #1d2d44;
   --text: #333;
+  --asideText: #fff;
   --cardBackground: #fff;
   --socialLinkBackground: #e9ecef;
   --socialLinkHoverBackground: #f8f9fa;
@@ -147,7 +148,14 @@ body {
   color: var(--btnCopied);
 }
 
-.profileCard-qrImg {
-  margin-top: 50px;
+.profileCard-qrCode {
+  color: var(--asideText);
+  margin: 50px;
+  max-width: 200px;
+  text-align: center;
+}
+
+.profileCard-qrCode img {
+  margin-top: 10px;;
   max-width: 200px;
 }

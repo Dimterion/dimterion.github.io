@@ -31,7 +31,7 @@ function copyLink() {
 
     try {
       document.execCommand("copy");
-      updateVisuals();
+      updateBtnText();
     } catch (err) {
       console.error("Could not copy page link.", err);
     }

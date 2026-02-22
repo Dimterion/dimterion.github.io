@@ -26,7 +26,7 @@ body {
     var(--backgroundPrimary) 0%,
     var(--backgroundSecondary) 100%
   );
-  color: var(--textColor);
+  color: var(--text);
   display: flex;
   flex-direction: column;
   font-family:
@@ -149,13 +149,28 @@ body {
 }
 
 .profileCard-qrCode {
-  color: var(--asideText);
-  margin: 50px;
-  max-width: 200px;
-  text-align: center;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .profileCard-qrCode {
+    color: var(--asideText);
+    display: block;
+    margin: 30px;
+    max-width: 200px;
+    text-align: center;
+  }
 }
 
 .profileCard-qrCode img {
-  margin-top: 10px;;
+  margin-top: 10px;
   max-width: 200px;
+}
+
+/* Focus adjustments */
+.profileCard-socialLink:focus-visible,
+.profileCard-btn:focus-visible,
+.profileCard-mainLink:focus-visible {
+  outline: 5px solid var(--socialLinkHover);
+  outline-offset: 5px;
 }

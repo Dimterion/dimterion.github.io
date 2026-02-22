@@ -1,13 +1,21 @@
+let copyTimeout;
+let originalBtnContent;
+
 function copyLink() {
   const copyLinkBtn = document.querySelector(".profileCard-btn");
   const currentUrl = window.location.href;
-  const originalBtnContent = copyLinkBtn.innerHTML;
+
+  if (!copyLinkBtn.classList.contains("copied")) {
+    originalBtnContent = copyLinkBtn.innerHTML;
+  }
 
   function updateBtnText() {
+    clearTimeout(copyTimeout);
+
     copyLinkBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
     copyLinkBtn.classList.add("copied");
 
-    setTimeout(() => {
+    copyTimeout = setTimeout(() => {
       copyLinkBtn.innerHTML = originalBtnContent;
       copyLinkBtn.classList.remove("copied");
     }, 2000);

@@ -146,6 +146,8 @@ body {
 .profileCard-btn.copied {
   background: var(--btnCopiedBackground);
   color: var(--btnCopied);
+  pointer-events: none;
+  opacity: 0.8;
 }
 
 .profileCard-qrCode {

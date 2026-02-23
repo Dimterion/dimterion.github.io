@@ -29,9 +29,7 @@ body {
   color: var(--text);
   display: flex;
   flex-direction: column;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-    sans-serif;
+  font-family: "Inter", sans-serif;
   justify-content: center;
   min-height: 100vh;
   padding: 15px;
@@ -49,6 +47,7 @@ body {
 }
 
 .profileCard-mainImg {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   height: 300px;
   object-fit: cover;
   width: 100%;
@@ -66,7 +65,7 @@ body {
 
 .profileCard-bio {
   font-size: 1.1em;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 30px;
 }
 

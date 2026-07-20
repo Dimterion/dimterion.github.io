@@ -1,0 +1,32 @@
+* {
+  font-family: "Jersey 25", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+footer {
+  align-items: center;
+  background-color: #ced4da;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.profile_picture {
+  height: 150px;
+  width: 150px;
+}
+
+.projects {
+  display: grid;
+  grid: auto-flow / 1fr 1fr 1fr;
+}

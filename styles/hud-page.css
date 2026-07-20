@@ -46,6 +46,7 @@ ul {
 .hud-footer {
   align-items: center;
   background-color: #ced4da;
+  color: #101010;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -57,6 +58,16 @@ ul {
   flex-direction: column;
   gap: 0.5rem;
   min-width: 0;
+}
+
+.hud-footer__panel--experience {
+  align-self: stretch;
+  justify-content: center;
+}
+
+.hud-footer__panel--projects {
+  align-self: stretch;
+  justify-content: center;
 }
 
 .hud-footer__value {
@@ -87,10 +98,36 @@ ul {
 }
 
 .hud-footer__project-button {
+  background-color: #adb5bd;
+  border: 2px solid #6c757d;
   min-height: 44px;
 }
 
 .hud-footer__experience-list {
   display: grid;
   gap: 0.5rem;
+}
+
+.hud-footer__experience-item {
+  line-height: 1.1;
+}
+
+@media (max-width: 900px) {
+  .hud-footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .hud-footer__panel {
+    width: 100%;
+  }
+
+  .hud-footer__project-grid {
+    width: 100%;
+  }
+
+  .hud-footer__portrait {
+    order: -1;
+  }
 }

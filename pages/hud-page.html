@@ -17,7 +17,20 @@
 
     <main class="hud-page__main">
       <section class="hud" aria-labelledby="hud-title">
-        <h1 id="hud-title">Profile card</h1>
+        <div class="hud__frame">
+          <header class="hud__header">
+            <h1 class="hud__title" id="hud-title">Profile card</h1>
+            <p class="hud__hint">Press A / D to look around</p>
+          </header>
+
+          <div class="hud__viewport">
+            <section
+              class="hud-screen hud-screen--active"
+              data-screen-container
+              aria-live="polite"
+            ></section>
+          </div>
+        </div>
       </section>
     </main>
 

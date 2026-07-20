@@ -1,8 +1,106 @@
 import { projects } from "../assets/projects-data.js";
+import { mainScreens } from "../assets/main-screen-data.js";
 
 const projectGrid = document.querySelector(".hud-footer__project-grid");
 const modalContainer = document.querySelector("[data-modal-container]");
+const screenContainer = document.querySelector("[data-screen-container]");
+
 const animationDuration = 220;
+const screenAnimationDuration = 280;
+
+let activeScreenIndex = 0;
+let isScreenAnimating = false;
+
+const createScreenMarkup = (screen) => {
+  const itemsMarkup = screen.items
+    .map(
+      (item) => `
+        <li class="hud-screen__list-item">
+          <p class="hud-screen__meta">${item}</p>
+        </li>
+      `,
+    )
+    .join("");
+
+  return `
+    <div class="hud-screen__panel">
+      <p class="hud-screen__eyebrow">${screen.eyebrow}</p>
+      <h2 class="hud-screen__heading">${screen.title}</h2>
+      <p class="hud-screen__text">${screen.text}</p>
+    </div>
+    <div class="hud-screen__panel">
+      <p class="hud-screen__eyebrow">Scan data</p>
+      <ul class="hud-screen__list">
+        ${itemsMarkup}
+      </ul>
+    </div>
+  `;
+};
+
+const renderInitialScreen = () => {
+  screenContainer.innerHTML = createScreenMarkup(
+    mainScreens[activeScreenIndex],
+  );
+};
+
+const goToScreen = (direction) => {
+  if (isScreenAnimating) {
+    return;
+  }
+
+  isScreenAnimating = true;
+
+  const currentScreen = screenContainer;
+  const nextIndex =
+    direction === "right"
+      ? (activeScreenIndex + 1) % mainScreens.length
+      : (activeScreenIndex - 1 + mainScreens.length) % mainScreens.length;
+
+  const nextScreen = document.createElement("section");
+
+  nextScreen.className = "hud-screen";
+  nextScreen.setAttribute("aria-live", "polite");
+  nextScreen.innerHTML = createScreenMarkup(mainScreens[nextIndex]);
+
+  if (direction === "right") {
+    nextScreen.classList.add("hud-screen--enter-from-right");
+    currentScreen.classList.add("hud-screen--exit-to-left");
+  } else {
+    nextScreen.classList.add("hud-screen--enter-from-left");
+    currentScreen.classList.add("hud-screen--exit-to-right");
+  }
+
+  currentScreen.parentElement.append(nextScreen);
+
+  window.setTimeout(() => {
+    currentScreen.className = "hud-screen hud-screen--active";
+    currentScreen.innerHTML = nextScreen.innerHTML;
+    currentScreen.removeAttribute("style");
+
+    nextScreen.remove();
+
+    activeScreenIndex = nextIndex;
+    isScreenAnimating = false;
+  }, screenAnimationDuration);
+};
+
+const bindScreenControls = () => {
+  window.addEventListener("keydown", (event) => {
+    if (event.target.closest("dialog[open]")) {
+      return;
+    }
+
+    const key = event.key.toLowerCase();
+
+    if (key === "a") {
+      goToScreen("left");
+    }
+
+    if (key === "d") {
+      goToScreen("right");
+    }
+  });
+};
 
 const createProjectButton = (project) => {
   const button = document.createElement("button");
@@ -133,6 +231,8 @@ const renderProjects = () => {
 
 const init = () => {
   renderProjects();
+  renderInitialScreen();
+  bindScreenControls();
 };
 
 init();

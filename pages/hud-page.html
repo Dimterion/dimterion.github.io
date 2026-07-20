@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../styles/hud-page.css" />
+    <link rel="stylesheet" href="../styles/hud-page.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,39 +12,68 @@
     />
     <title>HUD</title>
   </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer>
-      <div>
-        <p>4+ years</p>
-        <h3>GitHub daily contributions streak</h3>
+  <body class="hud-page">
+    <header class="hud-page__header"></header>
+
+    <main class="hud-page__main">
+      <section class="hud" aria-labelledby="hud-title">
+        <h1 id="hud-title" class="sr-only">Profile card</h1>
+      </section>
+    </main>
+
+    <footer class="hud-footer">
+      <section class="hud-footer__panel hud-footer__panel--metric">
+        <p class="hud-footer__value">4+ years</p>
+        <h2 class="hud-footer__label">GitHub daily contributions streak</h2>
+      </section>
+
+      <section class="hud-footer__panel hud-footer__panel--metric">
+        <p class="hud-footer__value">200+</p>
+        <h2 class="hud-footer__label">Posts</h2>
+      </section>
+
+      <div class="hud-footer__portrait">
+        <img
+          class="hud-footer__image"
+          src="../assets/profile_picture.jpg"
+          alt="Profile picture"
+        />
       </div>
-      <div>
-        <p>200+</p>
-        <h3>Posts</h3>
-      </div>
-      <img
-        class="profile_picture"
-        src="../assets/profile_picture.jpg"
-        alt="Profile picture"
-      />
-      <div>
-        <div class="projects">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
+
+      <section class="hud-footer__panel hud-footer__panel--projects">
+        <div class="hud-footer__project-grid" aria-label="Projects">
+          <button class="hud-footer__project-button" type="button">01</button>
+          <button class="hud-footer__project-button" type="button">02</button>
+          <button class="hud-footer__project-button" type="button">03</button>
+          <button class="hud-footer__project-button" type="button">04</button>
+          <button class="hud-footer__project-button" type="button">05</button>
+          <button class="hud-footer__project-button" type="button">06</button>
         </div>
-        <h3>Projects</h3>
-      </div>
-      <ul class="experience">
-        <li>10+ years / tech consultations</li>
-        <li>5+ years / tech writing</li>
-        <li>4+ years / web development</li>
-      </ul>
+        <h2 class="hud-footer__label">Projects</h2>
+      </section>
+
+      <section class="hud-footer__panel hud-footer__panel--experience">
+        <h2 class="sr-only">Experience</h2>
+        <ul class="hud-footer__experience-list">
+          <li class="hud-footer__experience-item">
+            10+ years / tech consultations
+          </li>
+          <li class="hud-footer__experience-item">5+ years / tech writing</li>
+          <li class="hud-footer__experience-item">
+            4+ years / web development
+          </li>
+        </ul>
+      </section>
     </footer>
+
+    <dialog
+      class="project-modal"
+      id="project-modal-1"
+      aria-labelledby="project-modal-1-title"
+    >
+      <h2 id="project-modal-1-title">Project 01</h2>
+      <p>Project details go here.</p>
+      <button type="button">Close</button>
+    </dialog>
   </body>
 </html>

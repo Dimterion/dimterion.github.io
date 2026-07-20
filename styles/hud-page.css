@@ -1,32 +1,96 @@
-* {
-  font-family: "Jersey 25", sans-serif;
-  font-style: normal;
-  font-weight: 400;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
+  background-color: #101010;
+  color: #f1f1f1;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
+  flex-direction: column;
   min-height: 100vh;
 }
 
-footer {
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.hud-page {
+  font-family: "Jersey 25", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.hud-page__header {
+}
+
+.hud-page__main {
+  flex: 1;
+}
+
+.hud-footer {
   align-items: center;
   background-color: #ced4da;
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
   gap: 1rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  padding: 1rem;
+}
+
+.hud-footer__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.hud-footer__value {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.hud-footer__label {
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.hud-footer__portrait {
+  display: flex;
   justify-content: center;
 }
 
-.profile_picture {
+.hud-footer__image {
   height: 150px;
+  object-fit: cover;
   width: 150px;
 }
 
-.projects {
+.hud-footer__project-grid {
   display: grid;
-  grid: auto-flow / 1fr 1fr 1fr;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.hud-footer__project-button {
+  min-height: 44px;
+}
+
+.hud-footer__experience-list {
+  display: grid;
+  gap: 0.5rem;
 }

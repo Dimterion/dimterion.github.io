@@ -47,8 +47,8 @@ export const projects = [
   {
     id: "project-06",
     buttonLabel: "6",
-    label: "project",
-    title: "Personal Site",
+    label: "Project 06",
+    title: "project",
     description: "project",
     stack: ["HTML", "CSS"],
     links: [],

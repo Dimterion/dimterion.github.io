@@ -20,19 +20,19 @@ const createProjectModal = (project) => {
   const links = project.links ?? [];
   const stack = project.stack ?? [];
   const dialog = document.createElement("dialog");
-  const linksMarkup = project.links
+  const linksMarkup = links
     .map(
       (link) => `
-        <li class="project-modal__link-item">
-          <a class="project-modal__link" href="${link.href}" rel="noopener noreferrer" target="_blank">
-            ${link.label}
-          </a>
-        </li>
-      `,
+      <li class="project-modal__link-item">
+        <a class="project-modal__link" href="${link.href}" rel="noopener noreferrer" target="_blank">
+          ${link.label}
+        </a>
+      </li>
+    `,
     )
     .join("");
 
-  const stackMarkup = project.stack
+  const stackMarkup = stack
     .map((item) => `<li class="project-modal__stack-item">${item}</li>`)
     .join("");
 

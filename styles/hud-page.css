@@ -131,3 +131,73 @@ ul {
     order: -1;
   }
 }
+
+.project-modal {
+  background: transparent;
+  border: none;
+  margin: 0;
+  max-height: 100vh;
+  max-width: 100vw;
+  padding: 0;
+}
+
+.project-modal::backdrop {
+  background-color: rgb(0 0 0 / 0%);
+  transition: background-color 220ms ease;
+}
+
+.project-modal[open]::backdrop {
+  background-color: rgb(0 0 0 / 0.65);
+}
+
+.project-modal__content {
+  background-color: #ced4da;
+  border: 4px solid #6c757d;
+  color: #101010;
+  margin: 2rem auto 0;
+  max-width: 40rem;
+  opacity: 0;
+  padding: 1.5rem;
+  transform: translateY(-3rem);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+  width: min(40rem, calc(100vw - 2rem));
+}
+
+.project-modal--visible .project-modal__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-modal--closing .project-modal__content {
+  opacity: 0;
+  transform: translateY(-3rem);
+}
+
+.project-modal__close {
+  align-items: center;
+  background-color: #adb5bd;
+  border: 2px solid #6c757d;
+  display: inline-flex;
+  height: 44px;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 44px;
+}
+
+.project-modal__eyebrow {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-modal__title {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.project-modal__text {
+  font-size: 1.125rem;
+  line-height: 1.2;
+}

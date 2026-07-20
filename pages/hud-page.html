@@ -42,12 +42,48 @@
 
       <section class="hud-footer__panel hud-footer__panel--projects">
         <div class="hud-footer__project-grid" aria-label="Projects">
-          <button class="hud-footer__project-button" type="button">01</button>
-          <button class="hud-footer__project-button" type="button">02</button>
-          <button class="hud-footer__project-button" type="button">03</button>
-          <button class="hud-footer__project-button" type="button">04</button>
-          <button class="hud-footer__project-button" type="button">05</button>
-          <button class="hud-footer__project-button" type="button">06</button>
+          <button
+            class="hud-footer__project-button"
+            data-modal-target="project-modal-1"
+            type="button"
+          >
+            01
+          </button>
+          <button
+            class="hud-footer__project-button"
+            data-modal-target="project-modal-2"
+            type="button"
+          >
+            02
+          </button>
+          <button
+            class="hud-footer__project-button"
+            data-modal-target="project-modal-3"
+            type="button"
+          >
+            03
+          </button>
+          <button
+            class="hud-footer__project-button"
+            data-modal-target="project-modal-4"
+            type="button"
+          >
+            04
+          </button>
+          <button
+            class="hud-footer__project-button"
+            data-modal-target="project-modal-5"
+            type="button"
+          >
+            05
+          </button>
+          <button
+            class="hud-footer__project-button"
+            data-modal-target="project-modal-6"
+            type="button"
+          >
+            06
+          </button>
         </div>
         <h2 class="hud-footer__label">Projects</h2>
       </section>
@@ -71,9 +107,133 @@
       id="project-modal-1"
       aria-labelledby="project-modal-1-title"
     >
-      <h2 id="project-modal-1-title">Project 01</h2>
-      <p>Project details go here.</p>
-      <button type="button">Close</button>
+      <article class="project-modal__content">
+        <button
+          class="project-modal__close"
+          data-modal-close
+          type="button"
+          aria-label="Close modal"
+        >
+          X
+        </button>
+        <p class="project-modal__eyebrow">Project 01</p>
+        <h2 class="project-modal__title" id="project-modal-1-title">
+          Project title
+        </h2>
+        <p class="project-modal__text">Description for project 01.</p>
+      </article>
     </dialog>
+
+    <dialog
+      class="project-modal"
+      id="project-modal-2"
+      aria-labelledby="project-modal-2-title"
+    >
+      <article class="project-modal__content">
+        <button
+          class="project-modal__close"
+          data-modal-close
+          type="button"
+          aria-label="Close modal"
+        >
+          X
+        </button>
+        <p class="project-modal__eyebrow">Project 02</p>
+        <h2 class="project-modal__title" id="project-modal-2-title">
+          Project title
+        </h2>
+        <p class="project-modal__text">Description for project 02.</p>
+      </article>
+    </dialog>
+
+    <dialog
+      class="project-modal"
+      id="project-modal-3"
+      aria-labelledby="project-modal-3-title"
+    >
+      <article class="project-modal__content">
+        <button
+          class="project-modal__close"
+          data-modal-close
+          type="button"
+          aria-label="Close modal"
+        >
+          X
+        </button>
+        <p class="project-modal__eyebrow">Project 03</p>
+        <h2 class="project-modal__title" id="project-modal-3-title">
+          Project title
+        </h2>
+        <p class="project-modal__text">Description for project 03.</p>
+      </article>
+    </dialog>
+
+    <dialog
+      class="project-modal"
+      id="project-modal-4"
+      aria-labelledby="project-modal-4-title"
+    >
+      <article class="project-modal__content">
+        <button
+          class="project-modal__close"
+          data-modal-close
+          type="button"
+          aria-label="Close modal"
+        >
+          X
+        </button>
+        <p class="project-modal__eyebrow">Project 04</p>
+        <h2 class="project-modal__title" id="project-modal-4-title">
+          Project title
+        </h2>
+        <p class="project-modal__text">Description for project 04.</p>
+      </article>
+    </dialog>
+
+    <dialog
+      class="project-modal"
+      id="project-modal-5"
+      aria-labelledby="project-modal-5-title"
+    >
+      <article class="project-modal__content">
+        <button
+          class="project-modal__close"
+          data-modal-close
+          type="button"
+          aria-label="Close modal"
+        >
+          X
+        </button>
+        <p class="project-modal__eyebrow">Project 05</p>
+        <h2 class="project-modal__title" id="project-modal-5-title">
+          Project title
+        </h2>
+        <p class="project-modal__text">Description for project 05.</p>
+      </article>
+    </dialog>
+
+    <dialog
+      class="project-modal"
+      id="project-modal-6"
+      aria-labelledby="project-modal-6-title"
+    >
+      <article class="project-modal__content">
+        <button
+          class="project-modal__close"
+          data-modal-close
+          type="button"
+          aria-label="Close modal"
+        >
+          X
+        </button>
+        <p class="project-modal__eyebrow">Project 06</p>
+        <h2 class="project-modal__title" id="project-modal-6-title">
+          Project title
+        </h2>
+        <p class="project-modal__text">Description for project 06.</p>
+      </article>
+    </dialog>
+
+    <script src="../scripts/hud-page.js" defer></script>
   </body>
 </html>

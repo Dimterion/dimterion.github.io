@@ -334,10 +334,11 @@ ul {
 }
 
 .hud-footer__experience-item {
-  line-height: 1.1;
+  display: flex;
+  justify-content: space-between;
 }
 
-.hud-footer__experience-item span {
+.hud-footer__experience-label {
   color: #495057;
   text-transform: uppercase;
 }

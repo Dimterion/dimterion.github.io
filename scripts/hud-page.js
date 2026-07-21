@@ -10,6 +10,9 @@ const modalContainer = document.querySelector("[data-modal-container]");
 
 const animationDuration = 220;
 const screenAnimationDuration = 280;
+const mobileBreakpoint = 900;
+
+const isMobileLayout = () => window.innerWidth <= mobileBreakpoint;
 
 let activeScreenIndex = 0;
 let isScreenAnimating = false;
@@ -52,14 +55,27 @@ const goToScreen = (direction) => {
     return;
   }
 
-  isScreenAnimating = true;
-
-  const currentScreen = screenContainer;
   const nextIndex =
     direction === "right"
       ? (activeScreenIndex + 1) % mainScreens.length
       : (activeScreenIndex - 1 + mainScreens.length) % mainScreens.length;
 
+  if (isMobileLayout()) {
+    screenContainer.innerHTML = createScreenMarkup(mainScreens[nextIndex]);
+    activeScreenIndex = nextIndex;
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+
+    return;
+  }
+
+  isScreenAnimating = true;
+
+  const currentScreen = screenContainer;
   const nextScreen = document.createElement("section");
 
   nextScreen.className = "hud-screen";
@@ -79,7 +95,6 @@ const goToScreen = (direction) => {
   window.setTimeout(() => {
     currentScreen.className = "hud-screen";
     currentScreen.innerHTML = nextScreen.innerHTML;
-    currentScreen.removeAttribute("style");
 
     nextScreen.remove();
 
@@ -88,25 +103,55 @@ const goToScreen = (direction) => {
   }, screenAnimationDuration);
 };
 
-const bindScreenControls = () => {
+const bindKeyboardControls = () => {
   window.addEventListener("keydown", (event) => {
+    const target = event.target;
+
+    if (!(target instanceof Element)) {
+      return;
+    }
+
     if (event.repeat) {
       return;
     }
 
-    if (event.target.closest("dialog[open]")) {
+    if (target.closest("dialog[open]")) {
+      return;
+    }
+
+    if (target.matches("input, textarea, select") || target.isContentEditable) {
       return;
     }
 
     if (event.key === "ArrowLeft") {
       event.preventDefault();
       goToScreen("left");
+      return;
     }
 
     if (event.key === "ArrowRight") {
       event.preventDefault();
       goToScreen("right");
+      return;
     }
+
+    const projectIndex = Number.parseInt(event.key, 10) - 1;
+
+    if (Number.isNaN(projectIndex) || projectIndex < 0) {
+      return;
+    }
+
+    const projectButtons = document.querySelectorAll(
+      ".hud-footer__project-button",
+    );
+    const targetButton = projectButtons[projectIndex];
+
+    if (!targetButton) {
+      return;
+    }
+
+    event.preventDefault();
+    targetButton.click();
   });
 };
 
@@ -250,7 +295,7 @@ const renderProjects = () => {
 
 const init = () => {
   renderInitialScreen();
-  bindScreenControls();
+  bindKeyboardControls();
   bindScreenNavigationButtons();
   renderProjects();
 };

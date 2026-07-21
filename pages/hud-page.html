@@ -17,8 +17,8 @@
       <section class="hud" aria-labelledby="hud-title">
         <div class="hud__frame">
           <header class="hud__header">
-            <h1 class="hud__title" id="hud-title">Dmitrii / Dimterion</h1>
-            <p class="hud__subtitle">Developer / Technical Consultant</p>
+            <h1 class="hud__title" id="hud-title" data-page-title></h1>
+            <p class="hud__subtitle" data-page-subtitle></p>
           </header>
 
           <div class="hud__viewport">
@@ -39,8 +39,8 @@
         rel="noopener noreferrer"
         class="hud-footer__panel hud-footer__panel--link"
       >
-        <p class="hud-footer__value">4+ years</p>
-        <h2 class="hud-footer__label">Contributions</h2>
+        <p class="hud-footer__value" data-footer-github-value></p>
+        <h2 class="hud-footer__label" data-footer-github-label></h2>
       </a>
 
       <a
@@ -49,41 +49,64 @@
         rel="noopener noreferrer"
         class="hud-footer__panel hud-footer__panel--link"
       >
-        <p class="hud-footer__value">200+</p>
-        <h2 class="hud-footer__label">Posts</h2>
+        <p class="hud-footer__value" data-footer-medium-value></p>
+        <h2 class="hud-footer__label" data-footer-medium-label></h2>
       </a>
 
       <div class="hud-footer__portrait-group">
-        <button
-          class="hud-footer__screen-button"
-          data-screen-direction="left"
-          type="button"
-          aria-label="Show previous profile section"
-        >
-          <span aria-hidden="true">◀</span>
-        </button>
+        <div class="hud-footer__controls hud-footer__controls--left">
+          <button
+            class="hud-footer__language-button"
+            data-language-button
+            data-language="en"
+            type="button"
+          ></button>
+
+          <button
+            class="hud-footer__screen-button"
+            data-screen-direction="left"
+            data-screen-previous-button
+            type="button"
+          >
+            <span aria-hidden="true">◀</span>
+          </button>
+        </div>
 
         <div class="hud-footer__portrait">
           <img
             class="hud-footer__image"
             src="../assets/hud_profile_picture.jpg"
-            alt="Profile picture"
+            alt=""
+            data-portrait-image
           />
         </div>
 
-        <button
-          class="hud-footer__screen-button"
-          data-screen-direction="right"
-          type="button"
-          aria-label="Show next profile section"
-        >
-          <span aria-hidden="true">▶</span>
-        </button>
+        <div class="hud-footer__controls hud-footer__controls--right">
+          <button
+            class="hud-footer__language-button"
+            data-language-button
+            data-language="fr"
+            type="button"
+          ></button>
+
+          <button
+            class="hud-footer__screen-button"
+            data-screen-direction="right"
+            data-screen-next-button
+            type="button"
+          >
+            <span aria-hidden="true">▶</span>
+          </button>
+        </div>
       </div>
 
       <section class="hud-footer__panel">
-        <div class="hud-footer__project-grid" aria-label="Projects"></div>
-        <h2 class="hud-footer__label">Projects</h2>
+        <div
+          class="hud-footer__project-grid"
+          aria-label="Projects"
+          data-project-grid
+        ></div>
+        <h2 class="hud-footer__label" data-footer-projects-label></h2>
       </section>
 
       <a
@@ -92,25 +115,11 @@
         rel="noopener noreferrer"
         class="hud-footer__panel hud-footer__panel--link"
       >
-        <ul class="hud-footer__experience-list">
-          <li class="hud-footer__experience-item">
-            <span class="hud-footer__experience-label">Support:</span>
-            <span>10+ years</span>
-          </li>
-          <li class="hud-footer__experience-item">
-            <span class="hud-footer__experience-label">Consulting:</span>
-            <span>9+ years</span>
-          </li>
-          <li class="hud-footer__experience-item">
-            <span class="hud-footer__experience-label">Writing:</span>
-            <span>5+ years</span>
-          </li>
-          <li class="hud-footer__experience-item">
-            <span class="hud-footer__experience-label">Coding:</span>
-            <span>4+ years</span>
-          </li>
-        </ul>
-        <h2 class="hud-footer__label">Experience</h2>
+        <ul
+          class="hud-footer__experience-list"
+          data-footer-experience-list
+        ></ul>
+        <h2 class="hud-footer__label" data-footer-experience-label></h2>
       </a>
     </footer>
 

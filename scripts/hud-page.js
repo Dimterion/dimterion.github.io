@@ -1,8 +1,60 @@
 import { siteText } from "../assets/site-text.js";
 
-let currentLocale = "en";
+const supportedLocales = ["en", "fr"];
+const localeStorageKey = "hud-language";
+
+const normalizeLocale = (locale) => {
+  if (typeof locale !== "string") {
+    return "en";
+  }
+
+  const baseLocale = locale.toLowerCase().split("-")[0];
+  return supportedLocales.includes(baseLocale) ? baseLocale : "en";
+};
+
+const getSavedLocale = () => {
+  try {
+    const savedLocale = window.localStorage.getItem(localeStorageKey);
+    return savedLocale ? normalizeLocale(savedLocale) : null;
+  } catch {
+    return null;
+  }
+};
+
+const getBrowserLocale = () => {
+  const browserLocales =
+    Array.isArray(navigator.languages) && navigator.languages.length > 0
+      ? navigator.languages
+      : [navigator.language];
+
+  for (const locale of browserLocales) {
+    const normalizedLocale = normalizeLocale(locale);
+
+    if (normalizedLocale === "fr") {
+      return "fr";
+    }
+
+    if (normalizedLocale === "en") {
+      return "en";
+    }
+  }
+
+  return "en";
+};
+
+const getInitialLocale = () => getSavedLocale() ?? getBrowserLocale();
+
+let currentLocale = getInitialLocale();
 
 const getText = () => siteText[currentLocale];
+
+const saveLocalePreference = (locale) => {
+  try {
+    window.localStorage.setItem(localeStorageKey, normalizeLocale(locale));
+  } catch {
+    return;
+  }
+};
 
 const screenContainer = document.querySelector("[data-screen-container]");
 const projectGrid = document.querySelector("[data-project-grid]");
@@ -65,11 +117,14 @@ const updateLanguageButtons = () => {
 };
 
 const setLanguage = (locale) => {
-  if (!siteText[locale] || locale === currentLocale) {
+  const normalizedLocale = normalizeLocale(locale);
+
+  if (normalizedLocale === currentLocale) {
     return;
   }
 
-  currentLocale = locale;
+  currentLocale = normalizedLocale;
+  saveLocalePreference(currentLocale);
   applyStaticText();
   renderCurrentScreen();
   renderProjects();

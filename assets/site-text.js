@@ -2,7 +2,9 @@ export const siteText = {
   en: {
     html: {
       lang: "en",
-      title: "HUD",
+      title: "Dmitrii / Dimterion — Developer and Technical Consultant",
+      description:
+        "Portfolio-style profile card for Dmitrii Dimterion, developer, technical consultant, writer, and web developer.",
     },
 
     page: {
@@ -199,7 +201,9 @@ export const siteText = {
   fr: {
     html: {
       lang: "fr",
-      title: "HUD",
+      title: "Dmitrii / Dimterion — Développeur et consultant technique",
+      description:
+        "Carte de profil de style portfolio de Dmitrii Dimterion, développeur, consultant technique, rédacteur et développeur web.",
     },
 
     page: {

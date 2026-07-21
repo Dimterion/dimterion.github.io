@@ -56,6 +56,7 @@ const saveLocalePreference = (locale) => {
   }
 };
 
+const metaDescription = document.querySelector('meta[name="description"]');
 const screenContainer = document.querySelector("[data-screen-container]");
 const projectGrid = document.querySelector("[data-project-grid]");
 const screenNavigationButtons = document.querySelectorAll(
@@ -151,6 +152,10 @@ const applyStaticText = () => {
 
   document.documentElement.lang = text.html.lang;
   document.title = text.html.title;
+
+  if (metaDescription) {
+    metaDescription.setAttribute("content", text.html.description);
+  }
 
   pageTitle.textContent = text.page.title;
   pageSubtitle.textContent = text.page.subtitle;

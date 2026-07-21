@@ -1,27 +1,19 @@
 import { projects } from "../assets/projects-data.js";
 import { mainScreens } from "../assets/main-screen-data.js";
 
-const projectGrid = document.querySelector(".hud-footer__project-grid");
-const modalContainer = document.querySelector("[data-modal-container]");
 const screenContainer = document.querySelector("[data-screen-container]");
+const projectGrid = document.querySelector(".hud-footer__project-grid");
 const screenNavigationButtons = document.querySelectorAll(
   "[data-screen-direction]",
 );
+const modalContainer = document.querySelector("[data-modal-container]");
 
 const animationDuration = 220;
 const screenAnimationDuration = 280;
 
 let activeScreenIndex = 0;
 let isScreenAnimating = false;
-
-const bindScreenNavigationButtons = () => {
-  screenNavigationButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const direction = button.dataset.screenDirection;
-      goToScreen(direction);
-    });
-  });
-};
+let lastTriggerButton = null;
 
 const createScreenMarkup = (screen) => {
   const itemsMarkup = screen.items
@@ -85,7 +77,7 @@ const goToScreen = (direction) => {
   currentScreen.parentElement.append(nextScreen);
 
   window.setTimeout(() => {
-    currentScreen.className = "hud-screen hud-screen--active";
+    currentScreen.className = "hud-screen";
     currentScreen.innerHTML = nextScreen.innerHTML;
     currentScreen.removeAttribute("style");
 
@@ -118,6 +110,14 @@ const bindScreenControls = () => {
   });
 };
 
+const bindScreenNavigationButtons = () => {
+  screenNavigationButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      goToScreen(button.dataset.screenDirection);
+    });
+  });
+};
+
 const createProjectButton = (project) => {
   const button = document.createElement("button");
 
@@ -134,6 +134,7 @@ const createProjectModal = (project) => {
   const links = project.links ?? [];
   const stack = project.stack ?? [];
   const dialog = document.createElement("dialog");
+
   const linksMarkup = links
     .map(
       (link) => `
@@ -171,8 +172,6 @@ const createProjectModal = (project) => {
 
   return dialog;
 };
-
-let lastTriggerButton = null;
 
 const openModal = (modal, triggerButton) => {
   if (!modal || modal.open) {
@@ -250,10 +249,10 @@ const renderProjects = () => {
 };
 
 const init = () => {
-  renderProjects();
   renderInitialScreen();
   bindScreenControls();
   bindScreenNavigationButtons();
+  renderProjects();
 };
 
 init();

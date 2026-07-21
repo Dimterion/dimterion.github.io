@@ -299,6 +299,40 @@ ul {
   width: 150px;
 }
 
+.hud-footer__portrait-group {
+  align-items: end;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.hud-footer__screen-button {
+  align-items: center;
+  background-color: #adb5bd;
+  border-bottom: 2px solid #6f757a;
+  border-left: 2px solid #d2d8dc;
+  border-right: 2px solid #8b9196;
+  border-top: 2px solid #d2d8dc;
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 0.3) inset,
+    0 1px 2px rgb(0 0 0 / 0.12);
+  color: #101010;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1.25rem;
+  height: 2rem;
+  justify-content: center;
+  width: 2rem;
+}
+
+.hud-footer__screen-button:active {
+  border-bottom: 2px solid #d2d8dc;
+  border-left: 2px solid #8b9196;
+  border-right: 2px solid #d2d8dc;
+  border-top: 2px solid #6f757a;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.12) inset;
+}
+
 .hud-footer__project-grid {
   display: grid;
   gap: 0.5rem;
@@ -392,7 +426,7 @@ ul {
     width: 100%;
   }
 
-  .hud-footer__portrait {
+  .hud-footer__portrait-group {
     order: -1;
   }
 }

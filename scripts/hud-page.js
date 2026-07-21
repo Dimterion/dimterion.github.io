@@ -4,12 +4,24 @@ import { mainScreens } from "../assets/main-screen-data.js";
 const projectGrid = document.querySelector(".hud-footer__project-grid");
 const modalContainer = document.querySelector("[data-modal-container]");
 const screenContainer = document.querySelector("[data-screen-container]");
+const screenNavigationButtons = document.querySelectorAll(
+  "[data-screen-direction]",
+);
 
 const animationDuration = 220;
 const screenAnimationDuration = 280;
 
 let activeScreenIndex = 0;
 let isScreenAnimating = false;
+
+const bindScreenNavigationButtons = () => {
+  screenNavigationButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const direction = button.dataset.screenDirection;
+      goToScreen(direction);
+    });
+  });
+};
 
 const createScreenMarkup = (screen) => {
   const itemsMarkup = screen.items
@@ -94,13 +106,13 @@ const bindScreenControls = () => {
       return;
     }
 
-    const key = event.key.toLowerCase();
-
-    if (key === "a") {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
       goToScreen("left");
     }
 
-    if (key === "d") {
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
       goToScreen("right");
     }
   });
@@ -241,6 +253,7 @@ const init = () => {
   renderProjects();
   renderInitialScreen();
   bindScreenControls();
+  bindScreenNavigationButtons();
 };
 
 init();

@@ -43,12 +43,32 @@
         <h2 class="hud-footer__label">Posts</h2>
       </section>
 
-      <div class="hud-footer__portrait">
-        <img
-          class="hud-footer__image"
-          src="../assets/profile_picture.jpg"
-          alt="Profile picture"
-        />
+      <div class="hud-footer__portrait-group">
+        <button
+          class="hud-footer__screen-button"
+          data-screen-direction="left"
+          type="button"
+          aria-label="Show previous profile section"
+        >
+          <span aria-hidden="true">◀</span>
+        </button>
+
+        <div class="hud-footer__portrait">
+          <img
+            class="hud-footer__image"
+            src="../assets/profile_picture.jpg"
+            alt="Profile picture"
+          />
+        </div>
+
+        <button
+          class="hud-footer__screen-button"
+          data-screen-direction="right"
+          type="button"
+          aria-label="Show next profile section"
+        >
+          <span aria-hidden="true">▶</span>
+        </button>
       </div>
 
       <section class="hud-footer__panel hud-footer__panel--projects">

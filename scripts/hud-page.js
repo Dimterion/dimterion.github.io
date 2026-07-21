@@ -24,12 +24,12 @@ const createScreenMarkup = (screen) => {
 
   return `
     <div class="hud-screen__panel">
-      <p class="hud-screen__eyebrow">${screen.eyebrow}</p>
+      <p class="hud-screen__label">${screen.label}</p>
       <h2 class="hud-screen__heading">${screen.title}</h2>
       <p class="hud-screen__text">${screen.text}</p>
     </div>
     <div class="hud-screen__panel">
-      <p class="hud-screen__eyebrow">Scan data</p>
+      <p class="hud-screen__label">Scan data</p>
       <ul class="hud-screen__list">
         ${itemsMarkup}
       </ul>
@@ -86,6 +86,10 @@ const goToScreen = (direction) => {
 
 const bindScreenControls = () => {
   window.addEventListener("keydown", (event) => {
+    if (event.repeat) {
+      return;
+    }
+
     if (event.target.closest("dialog[open]")) {
       return;
     }
@@ -156,11 +160,14 @@ const createProjectModal = (project) => {
   return dialog;
 };
 
-const openModal = (modal) => {
+let lastTriggerButton = null;
+
+const openModal = (modal, triggerButton) => {
   if (!modal || modal.open) {
     return;
   }
 
+  lastTriggerButton = triggerButton;
   modal.classList.remove("project-modal--closing");
   modal.showModal();
 
@@ -184,6 +191,7 @@ const closeModal = (modal) => {
   window.setTimeout(() => {
     modal.classList.remove("project-modal--closing");
     modal.close();
+    lastTriggerButton?.focus();
   }, animationDuration);
 };
 
@@ -216,7 +224,7 @@ const renderProjects = () => {
     const modal = createProjectModal(project);
 
     button.addEventListener("click", () => {
-      openModal(modal);
+      openModal(modal, button);
     });
 
     bindModalEvents(modal);

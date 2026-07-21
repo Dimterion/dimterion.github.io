@@ -12,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 button,
@@ -35,9 +35,6 @@ ul {
   font-family: "Jersey 25", sans-serif;
   font-style: normal;
   font-weight: 400;
-}
-
-.hud-page__header {
 }
 
 .hud-page__main {
@@ -137,7 +134,7 @@ ul {
   padding: 1rem;
 }
 
-.hud-screen__eyebrow {
+.hud-screen__label {
   color: #adb5bd;
   font-size: 1rem;
   margin-bottom: 0.5rem;
@@ -346,15 +343,47 @@ ul {
 }
 
 @media (max-width: 900px) {
+  .hud-page__main {
+    min-height: auto;
+  }
+
+  .hud {
+    min-height: auto;
+    padding: 0.25rem;
+  }
+
+  .hud__frame {
+    min-height: auto;
+  }
+
+  .hud__viewport {
+    min-height: 420px;
+    overflow: visible;
+  }
+
+  .hud-screen {
+    height: auto;
+    min-height: 100%;
+    position: relative;
+  }
+
+  .hud-screen {
+    grid-template-columns: 1fr;
+  }
+
+  .hud__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .hud-footer {
     grid-template-columns: 1fr;
     justify-items: center;
-    max-height: 40vh;
-    overflow-y: auto;
     text-align: center;
   }
 
   .hud-footer__panel {
+    max-width: none;
     width: 100%;
   }
 
@@ -436,4 +465,18 @@ ul {
 .project-modal__text {
   font-size: 1.125rem;
   line-height: 1.2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hud-screen--enter-from-right,
+  .hud-screen--enter-from-left,
+  .hud-screen--exit-to-left,
+  .hud-screen--exit-to-right {
+    animation: none;
+  }
+
+  .project-modal::backdrop,
+  .project-modal__content {
+    transition: none;
+  }
 }

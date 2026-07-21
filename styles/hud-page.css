@@ -260,8 +260,37 @@ ul {
   width: 100%;
 }
 
+.hud-footer__panel--link {
+  color: #101010;
+  position: relative;
+  text-decoration: none;
+}
+
+.hud-footer__panel--link::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='2' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpath d='M14 5h5v5'/%3E%3Cpath d='M10 14 19 5'/%3E%3Cpath d='M19 14v5H5V5h5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 0.9rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  width: 0.9rem;
+}
+
+.hud-footer__panel--link:hover {
+  background-color: #adb5bd;
+}
+
+.hud-footer__panel--link:focus-visible {
+  outline: 2px solid #495057;
+  outline-offset: -2px;
+}
+
 .hud-footer__panel--experience {
   align-self: stretch;
+  padding-right: 1.75rem;
+
 }
 
 .hud-footer__panel--projects {

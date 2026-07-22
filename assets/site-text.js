@@ -16,14 +16,14 @@ export const siteText = {
       links: {
         github: {
           value: "4+ years",
-          label: "Contributions",
+          label: "Daily commits",
         },
         medium: {
           value: "200+",
           label: "Posts",
         },
         linkedin: {
-          label: "Experience",
+          label: "Experience (years)",
         },
       },
 
@@ -58,19 +58,19 @@ export const siteText = {
       experience: [
         {
           label: "Support",
-          value: "10+ years",
+          value: "10+",
         },
         {
           label: "Consulting",
-          value: "9+ years",
+          value: "9+",
         },
         {
           label: "Writing",
-          value: "5+ years",
+          value: "5+",
         },
         {
           label: "Coding",
-          value: "4+ years",
+          value: "4+",
         },
       ],
     },
@@ -215,14 +215,14 @@ export const siteText = {
       links: {
         github: {
           value: "4+ ans",
-          label: "Contributions",
+          label: "Commits / jour",
         },
         medium: {
           value: "200+",
           label: "Articles",
         },
         linkedin: {
-          label: "Expérience",
+          label: "Expérience (ans)",
         },
       },
 
@@ -257,19 +257,19 @@ export const siteText = {
       experience: [
         {
           label: "Support",
-          value: "10+ ans",
+          value: "10+",
         },
         {
           label: "Conseil",
-          value: "9+ ans",
+          value: "9+",
         },
         {
           label: "Rédaction",
-          value: "5+ ans",
+          value: "5+",
         },
         {
-          label: "Développement",
-          value: "4+ ans",
+          label: "Codage",
+          value: "4+",
         },
       ],
     },

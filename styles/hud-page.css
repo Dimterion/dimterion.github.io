@@ -6,13 +6,19 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   background-color: #101010;
   color: #f1f1f1;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  overflow-x: hidden;
+  height: 100dvh;
+  min-height: 100dvh;
+  overflow: hidden;
 }
 
 button,
@@ -39,15 +45,17 @@ ul {
 
 .hud-page__main {
   display: flex;
-  flex: 1;
+  flex: 1 1 auto;
   min-height: 0;
+  overflow: hidden;
 }
 
 .hud {
   display: flex;
-  flex: 1;
+  flex: 1 1 auto;
   min-height: 0;
   padding: 1rem;
+  overflow: hidden;
 }
 
 .hud__frame {
@@ -60,10 +68,11 @@ ul {
     0 1px 0 rgb(255 255 255 / 0.1) inset,
     0 4px 12px rgb(0 0 0 / 0.2);
   display: flex;
-  flex: 1;
+  flex: 1 1 auto;
   flex-direction: column;
   gap: 1rem;
   min-height: 0;
+  overflow: hidden;
   padding: 1rem;
 }
 
@@ -92,9 +101,17 @@ ul {
   border-left: 2px solid #c7ccd1;
   border-right: 2px solid #7a7f84;
   border-top: 2px solid #c7ccd1;
-  flex: 1;
-  min-height: 320px;
+  flex: 1 1 auto;
+  min-height: 0;
   overflow: hidden;
+  position: relative;
+}
+
+.hud__scroll-area {
+  height: 100%;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -104,11 +121,9 @@ ul {
   grid-template-columns: 1.2fr 0.8fr;
   height: 100%;
   left: 0;
-  opacity: 1;
   padding: 1.5rem;
   position: absolute;
   top: 0;
-  transform: translateX(0);
   width: 100%;
 }
 
@@ -534,8 +549,7 @@ ul {
   }
 
   .hud__viewport {
-    min-height: 420px;
-    overflow: visible;
+    min-height: 0;
   }
 
   .hud-screen {

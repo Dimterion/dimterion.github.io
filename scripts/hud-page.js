@@ -58,6 +58,7 @@ const saveLocalePreference = (locale) => {
 
 const metaDescription = document.querySelector('meta[name="description"]');
 const screenContainer = document.querySelector("[data-screen-container]");
+const scrollArea = document.querySelector(".hud__scroll-area");
 const projectGrid = document.querySelector("[data-project-grid]");
 const screenNavigationButtons = document.querySelectorAll(
   "[data-screen-direction]",
@@ -238,7 +239,7 @@ const goToScreen = (direction) => {
     );
     activeScreenIndex = nextIndex;
 
-    window.scrollTo({
+    scrollArea?.scrollTo({
       top: 0,
       left: 0,
       behavior: "smooth",

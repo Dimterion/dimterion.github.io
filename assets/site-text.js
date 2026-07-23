@@ -15,15 +15,15 @@ export const siteText = {
     footer: {
       links: {
         github: {
-          value: "4+ years",
-          label: "Daily commits",
+          value: "4+ yrs",
+          label: "Commits",
         },
         medium: {
           value: "200+",
           label: "Posts",
         },
         linkedin: {
-          label: "Experience (years)",
+          label: "Exp. (yrs)",
         },
       },
 
@@ -76,7 +76,7 @@ export const siteText = {
     },
 
     screens: {
-      scanDataLabel: "Info",
+      scanDataLabel: "Details",
 
       items: [
         {
@@ -270,14 +270,14 @@ export const siteText = {
       links: {
         github: {
           value: "4+ ans",
-          label: "Commits / jour",
+          label: "Commits",
         },
         medium: {
           value: "200+",
           label: "Articles",
         },
         linkedin: {
-          label: "Expérience (ans)",
+          label: "Exp. (ans)",
         },
       },
 
@@ -330,7 +330,7 @@ export const siteText = {
     },
 
     screens: {
-      scanDataLabel: "Infos",
+      scanDataLabel: "Détails",
 
       items: [
         {

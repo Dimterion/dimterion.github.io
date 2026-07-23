@@ -148,7 +148,7 @@ ul {
 
 .hud-screen__text {
   color: #dee2e6;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.2;
   max-width: 28ch;
 }
@@ -165,7 +165,7 @@ ul {
 
 .hud-screen__meta {
   color: #adb5bd;
-  font-size: 1rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
 }
 
@@ -474,7 +474,7 @@ ul {
   left: 50%;
   max-width: 40rem;
   opacity: 0;
-  padding: 1.5rem;
+  padding: 2rem;
   position: fixed;
   top: 0;
   transform: translate(-50%, -100%);
@@ -502,7 +502,10 @@ ul {
   display: inline-flex;
   height: 2rem;
   justify-content: center;
+  right: 0.1rem;
   margin-bottom: 1rem;
+  position: absolute;
+  top: 0.1rem;
   width: 2rem;
 }
 
@@ -518,7 +521,7 @@ ul {
 }
 
 .project-modal__text {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.2;
 }
 

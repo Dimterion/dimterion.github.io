@@ -9,7 +9,7 @@ export const siteText = {
 
     page: {
       title: "Dmitrii / Dimterion",
-      subtitle: "Developer / Technical Consultant",
+      subtitle: "Developer / Consultant / Writer",
     },
 
     footer: {
@@ -76,51 +76,53 @@ export const siteText = {
     },
 
     screens: {
-      scanDataLabel: "Scan data",
+      scanDataLabel: "Info",
 
       items: [
         {
           id: "screen-01",
           label: "01",
-          title: "Profile",
-          text: "Technical consultant, product support specialist and developer with over 10 years of experience working in the video games and financial industries.",
+          title: "Bio",
+          text: "Technical consultant, product support specialist, and developer with 10+ years of experience working in the video games and financial industries. Check the interactive section below for projects, links, and additional details.",
           items: [
-            "Specialize in product support, documentation, quality assurance/testing, investigating complex technical issues, developing modern dynamic, accessible and responsive applications.",
-            "Proficient in programming languages, CRM software and project management tools.",
-            "Passionate about software development, product support and creating engaging and accessible applications and websites that enhance user experience and satisfaction.",
+            "Worked at Blizzard Entertainment for 9+ years.",
+            "Based in France.",
+            "Passionate about writing, coding, and games.",
           ],
         },
         {
           id: "screen-02",
           label: "02",
           title: "Skills",
-          text: "Proficient in programming languages and project management tools.",
+          text: "Proficient in multilingual product support, technical consultations, and web development. I also write articles, stories, and learning-focused content, and build websites and applications.",
           items: [
-            "HTML, CSS, JavaScript / TypeScript, React",
-            "Technical writing",
-            "Product support and consultations",
+            "HTML, CSS, JavaScript / TypeScript",
+            "React",
+            "Tailwind CSS",
+            "CRM software",
+            "Languages: EN, FR, RU",
           ],
         },
         {
           id: "screen-03",
           label: "03",
-          title: "Projects",
-          text: "Build responsive and accessible web sites and applications using modern web development technologies. Write about programming and development.",
+          title: "Facts",
+          text: "I contribute to GitHub daily, publish on Medium weekly, track everything I read, watch, and play, and make time to learn and write every day.",
           items: [
-            "Daily GitHub contributions",
-            "Weekly Medium articles",
-            "10+ years of experience",
+            "Daily GitHub contributions streak: 4+ years.",
+            "Weekly Medium posts every Friday: 4+ years.",
+            "Duolingo streak: 4,400+ days.",
           ],
         },
         {
           id: "screen-04",
           label: "04",
-          title: "Approach",
-          text: "I'm a developer and technical consultant, coding daily and writing about it.",
+          title: "Activities",
+          text: "Currently building a job search helper app and website, writing stories, and maintaining an interactive storytelling platform. Use the project buttons below to explore more.",
           items: [
-            "Consistent work with daily contributions",
-            "Documenting the process to learn and improve",
-            "Start small, grow over time, keep every project up-to-date",
+            "Built a platform for creating interactive text adventures.",
+            "Working on a simple all-in-one app for organizing job search activities.",
+            "Writing different kinds of stories and sharing some of them online.",
           ],
         },
       ],
@@ -138,61 +140,114 @@ export const siteText = {
         {
           id: "project-01",
           buttonLabel: "1",
-          label: "Project 01",
-          title: "project",
-          description: "project",
-          stack: ["HTML", "CSS", "JavaScript"],
+          label: "Interactive Storytelling",
+          title: "Interactive Stories Platform",
+          description:
+            "A tool for creating interactive branching stories with multiple choices and outcomes.",
+          stack: ["React", "TypeScript", "Tailwind CSS"],
           links: [
             {
-              label: "Repository",
-              href: "https://github.com",
+              label: "Live Version",
+              href: "https://stories-platform.dimterion.com/",
+            },
+            {
+              label: "GitHub Repo",
+              href: "https://github.com/Dimterion/stories-platform",
             },
           ],
         },
         {
           id: "project-02",
           buttonLabel: "2",
-          label: "Project 02",
-          title: "project",
-          description: "project",
-          stack: ["HTML", "CSS", "JavaScript"],
-          links: [],
+          label: "Personal Site",
+          title: "dimterion.com",
+          description:
+            "Personal website, blog, project space, and contact hub.",
+          stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+          links: [
+            {
+              label: "Live Version",
+              href: "https://www.dimterion.com/",
+            },
+            {
+              label: "GitHub Repo",
+              href: "https://github.com/Dimterion/personal-site",
+            },
+          ],
         },
         {
           id: "project-03",
           buttonLabel: "3",
-          label: "Project 03",
-          title: "project",
-          description: "project",
-          stack: ["JavaScript", "CSS"],
-          links: [],
+          label: "Storytelling",
+          title: "Dimterion's stories",
+          description: "A website that hosts a collection of personal stories.",
+          stack: ["React", "JavaScript", "CSS"],
+          links: [
+            {
+              label: "Live Version",
+              href: "https://stories.dimterion.com/",
+            },
+            {
+              label: "GitHub Repo",
+              href: "https://github.com/Dimterion/stories-db",
+            },
+          ],
         },
         {
           id: "project-04",
           buttonLabel: "4",
-          label: "Project 04",
-          title: "project",
-          description: "project",
-          stack: ["HTML", "CSS", "JavaScript"],
-          links: [],
+          label: "Tech Writing",
+          title: "Medium Blog",
+          description: "200+ posts published weekly on Medium over 4+ years.",
+          stack: [],
+          links: [
+            {
+              label: "Blog",
+              href: "https://medium.com/@dimterion",
+            },
+          ],
         },
         {
           id: "project-05",
           buttonLabel: "5",
-          label: "Project 05",
-          title: "project",
-          description: "project",
-          stack: ["JavaScript"],
-          links: [],
+          label: "Coding and Development",
+          title: "Daily Contributions and Ongoing Work",
+          description:
+            "4+ years of daily contributions across multiple projects, with a focus on steady learning and improvement.",
+          stack: [],
+          links: [
+            {
+              label: "GitHub Profile",
+              href: "https://github.com/Dimterion",
+            },
+          ],
         },
         {
           id: "project-06",
           buttonLabel: "6",
-          label: "Project 06",
-          title: "project",
-          description: "project",
-          stack: ["HTML", "CSS"],
-          links: [],
+          label: "Interactive Text Adventures",
+          title: "Poets of Tomorrow’s World",
+          description:
+            "Interactive fiction projects with multiple choices and branching outcomes.",
+          stack: ["React", "JavaScript", "CSS"],
+          links: [
+            {
+              label: "Live Version - 01",
+              href: "https://poets-of-tomorrows-world.vercel.app/",
+            },
+            {
+              label: "GitHub Repo - 01",
+              href: "https://github.com/Dimterion/PoTW",
+            },
+            {
+              label: "Live Version - 02",
+              href: "https://profound-cat-a609de.netlify.app/",
+            },
+            {
+              label: "GitHub Repo - 02",
+              href: "https://github.com/Dimterion/PoTW-GO/",
+            },
+          ],
         },
       ],
     },
@@ -208,7 +263,7 @@ export const siteText = {
 
     page: {
       title: "Dmitrii / Dimterion",
-      subtitle: "Développeur / Consultant technique",
+      subtitle: "Développeur / Consultant / Rédacteur",
     },
 
     footer: {
@@ -268,58 +323,60 @@ export const siteText = {
           value: "5+",
         },
         {
-          label: "Codage",
+          label: "Code",
           value: "4+",
         },
       ],
     },
 
     screens: {
-      scanDataLabel: "Données d’analyse",
+      scanDataLabel: "Infos",
 
       items: [
         {
           id: "screen-01",
           label: "01",
           title: "Profil",
-          text: "Consultant technique, spécialiste du support produit et développeur avec plus de 10 ans d’expérience dans les secteurs du jeu vidéo et de la finance.",
+          text: "Consultant technique, spécialiste du support produit et développeur avec plus de 10 ans d’expérience dans les secteurs du jeu vidéo et de la finance. Consultez la section interactive ci-dessous pour découvrir les projets, les liens et d’autres informations.",
           items: [
-            "Spécialisé dans le support produit, la documentation, l’assurance qualité et les tests, l’analyse de problèmes techniques complexes, ainsi que le développement d’applications modernes, dynamiques, accessibles et responsives.",
-            "Maîtrise des langages de programmation, des logiciels CRM et des outils de gestion de projet.",
-            "Passionné par le développement logiciel, le support produit et la création d’applications et de sites web engageants et accessibles qui améliorent l’expérience et la satisfaction des utilisateurs.",
+            "9+ ans chez Blizzard Entertainment",
+            "Basé en France.",
+            "Passionné par l’écriture, le code et les jeux.",
           ],
         },
         {
           id: "screen-02",
           label: "02",
           title: "Compétences",
-          text: "Maîtrise des langages de programmation et des outils de gestion de projet.",
+          text: "Compétent en support produit multilingue, en conseil technique et en développement web. J’écris aussi des articles, des histoires et du contenu orienté apprentissage, et je crée des sites et des applications.",
           items: [
-            "HTML, CSS, JavaScript / TypeScript, React",
-            "Rédaction technique",
-            "Support produit et conseil",
+            "HTML, CSS, JavaScript / TypeScript",
+            "React",
+            "Tailwind CSS",
+            "Logiciels CRM",
+            "Langues : EN, FR, RU",
           ],
         },
         {
           id: "screen-03",
           label: "03",
-          title: "Projets",
-          text: "Création de sites web et d’applications responsives et accessibles à l’aide de technologies modernes du développement web. Rédaction d’articles sur la programmation et le développement.",
+          title: "Repères",
+          text: "Je contribue à GitHub chaque jour, je publie sur Medium chaque semaine, je garde une trace de tout ce que je lis, regarde et joue, et je prends du temps chaque jour pour apprendre et écrire.",
           items: [
-            "Contributions quotidiennes sur GitHub",
-            "Articles hebdomadaires sur Medium",
-            "Plus de 10 ans d’expérience",
+            "Série de contributions quotidiennes sur GitHub : 4+ ans.",
+            "Publications hebdomadaires sur Medium chaque vendredi : 4+ ans.",
+            "Série Duolingo : 4 400+ jours.",
           ],
         },
         {
           id: "screen-04",
           label: "04",
-          title: "Approche",
-          text: "Je suis développeur et consultant technique, je code chaque jour et j’écris sur ce sujet.",
+          title: "Activités",
+          text: "Je développe actuellement une application et un site d’aide à la recherche d’emploi, j’écris des histoires et je maintiens une plateforme de narration interactive. Utilisez les boutons de projet ci-dessous pour en voir plus.",
           items: [
-            "Travail régulier avec des contributions quotidiennes",
-            "Documentation du processus pour apprendre et progresser",
-            "Commencer petit, évoluer dans le temps et maintenir chaque projet à jour",
+            "Création d’une plateforme pour concevoir des aventures textuelles interactives.",
+            "Travail en cours sur une application simple tout-en-un pour organiser les activités liées à la recherche d’emploi.",
+            "Écriture de différents types d’histoires et publication de certaines d’entre elles en ligne.",
           ],
         },
       ],
@@ -337,61 +394,116 @@ export const siteText = {
         {
           id: "project-01",
           buttonLabel: "1",
-          label: "Projet 01",
-          title: "projet",
-          description: "projet",
-          stack: ["HTML", "CSS", "JavaScript"],
+          label: "Narration interactive",
+          title: "Plateforme d’histoires interactives",
+          description:
+            "Un outil pour créer des histoires interactives à embranchements avec plusieurs choix et plusieurs issues.",
+          stack: ["React", "TypeScript", "Tailwind CSS"],
           links: [
             {
-              label: "Dépôt",
-              href: "https://github.com",
+              label: "Version en ligne",
+              href: "https://stories-platform.dimterion.com/",
+            },
+            {
+              label: "Repo GitHub",
+              href: "https://github.com/Dimterion/stories-platform",
             },
           ],
         },
         {
           id: "project-02",
           buttonLabel: "2",
-          label: "Projet 02",
-          title: "projet",
-          description: "projet",
-          stack: ["HTML", "CSS", "JavaScript"],
-          links: [],
+          label: "Site personnel",
+          title: "dimterion.com",
+          description:
+            "Site personnel, blog, espace projets et point de contact.",
+          stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+          links: [
+            {
+              label: "Version en ligne",
+              href: "https://www.dimterion.com/",
+            },
+            {
+              label: "Repo GitHub",
+              href: "https://github.com/Dimterion/personal-site",
+            },
+          ],
         },
         {
           id: "project-03",
           buttonLabel: "3",
-          label: "Projet 03",
-          title: "projet",
-          description: "projet",
-          stack: ["JavaScript", "CSS"],
-          links: [],
+          label: "Histoires",
+          title: "Les histoires de Dimterion",
+          description:
+            "Un site qui regroupe une collection d’histoires personnelles.",
+          stack: ["React", "JavaScript", "CSS"],
+          links: [
+            {
+              label: "Version en ligne",
+              href: "https://stories.dimterion.com/",
+            },
+            {
+              label: "Repo GitHub",
+              href: "https://github.com/Dimterion/stories-db",
+            },
+          ],
         },
         {
           id: "project-04",
           buttonLabel: "4",
-          label: "Projet 04",
-          title: "projet",
-          description: "projet",
-          stack: ["HTML", "CSS", "JavaScript"],
-          links: [],
+          label: "Rédaction technique",
+          title: "Blog Medium",
+          description:
+            "Plus de 200 articles publiés chaque semaine sur Medium depuis plus de 4 ans.",
+          stack: [],
+          links: [
+            {
+              label: "Blog",
+              href: "https://medium.com/@dimterion",
+            },
+          ],
         },
         {
           id: "project-05",
           buttonLabel: "5",
-          label: "Projet 05",
-          title: "projet",
-          description: "projet",
-          stack: ["JavaScript"],
-          links: [],
+          label: "Code et développement",
+          title: "Contributions quotidiennes et travail en continu",
+          description:
+            "Plus de 4 ans de contributions quotidiennes sur plusieurs projets, avec une attention constante à l’apprentissage et à l’amélioration.",
+          stack: [],
+          links: [
+            {
+              label: "Profil GitHub",
+              href: "https://github.com/Dimterion",
+            },
+          ],
         },
         {
           id: "project-06",
           buttonLabel: "6",
-          label: "Projet 06",
-          title: "projet",
-          description: "projet",
-          stack: ["HTML", "CSS"],
-          links: [],
+          label: "Aventures textuelles interactives",
+          title: "Poets of Tomorrow’s World",
+          description:
+            "Des projets de fiction interactive avec plusieurs choix et des embranchements narratifs.",
+          stack: ["React", "JavaScript", "CSS"],
+          links: [
+            {
+              label: "Version en ligne - 01",
+              href: "https://poets-of-tomorrows-world.vercel.app/",
+            },
+            {
+              label: "Repo GitHub - 01",
+              href: "https://github.com/Dimterion/PoTW",
+            },
+            {
+              label: "Version en ligne - 02",
+              href: "https://profound-cat-a609de.netlify.app/",
+            },
+            {
+              label: "Repo GitHub - 02",
+              href: "https://github.com/Dimterion/PoTW-GO/",
+            },
+          ],
         },
       ],
     },

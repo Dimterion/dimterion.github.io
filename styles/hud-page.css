@@ -292,10 +292,6 @@ ul {
   width: 0.9rem;
 }
 
-.hud-footer__panel--link:hover {
-  background-color: #adb5bd;
-}
-
 .hud-footer__panel--link:focus-visible {
   outline: 2px solid #495057;
   outline-offset: -2px;
@@ -339,7 +335,10 @@ ul {
   justify-content: space-between;
 }
 
-.hud-footer__language-button {
+.hud-footer__language-button,
+.hud-footer__screen-button,
+.hud-footer__project-button,
+.project-modal__close {
   align-items: center;
   background-color: #adb5bd;
   border-bottom: 2px solid #6f757a;
@@ -352,55 +351,53 @@ ul {
   color: #101010;
   cursor: pointer;
   display: inline-flex;
-  font-size: 1rem;
+  font-size: 1.25rem;
   height: 2rem;
   justify-content: center;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    box-shadow 120ms ease;
   width: 2rem;
-  padding: 0 0.5rem;
 }
 
-.hud-footer__language-button:active {
+.hud-footer__panel--link:active,
+.hud-footer__language-button:active,
+.hud-footer__screen-button:active,
+.hud-footer__project-button:active,
+.project-modal__close:active {
   border-bottom: 2px solid #d2d8dc;
   border-left: 2px solid #8b9196;
   border-right: 2px solid #d2d8dc;
   border-top: 2px solid #6f757a;
   box-shadow: 0 1px 2px rgb(0 0 0 / 0.12) inset;
+}
+
+.hud-footer__panel--link:hover,
+.hud-footer__language-button:hover,
+.hud-footer__screen-button:hover,
+.hud-footer__project-button:hover,
+.project-modal__close:hover {
+  background-color: #a8b0b8;
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 0.2) inset,
+    0 0 0 1px rgb(0 0 0 / 0.04) inset,
+    0 1px 2px rgb(0 0 0 / 0.12);
 }
 
 .hud-footer__language-button[aria-pressed="true"] {
-  background-color: #8f979f;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.12) inset;
-}
-
-.hud-footer__language-button:focus-visible {
-  outline: 2px solid #495057;
-  outline-offset: 2px;
-}
-
-.hud-footer__screen-button {
-  align-items: center;
-  background-color: #adb5bd;
-  border-bottom: 2px solid #6f757a;
-  border-left: 2px solid #d2d8dc;
-  border-right: 2px solid #8b9196;
-  border-top: 2px solid #d2d8dc;
-  box-shadow:
-    0 1px 0 rgb(255 255 255 / 0.3) inset,
-    0 1px 2px rgb(0 0 0 / 0.12);
-  color: #101010;
-  cursor: pointer;
-  display: inline-flex;
-  height: 2rem;
-  justify-content: center;
-  width: 2rem;
-}
-
-.hud-footer__screen-button:active {
   border-bottom: 2px solid #d2d8dc;
   border-left: 2px solid #8b9196;
   border-right: 2px solid #d2d8dc;
   border-top: 2px solid #6f757a;
   box-shadow: 0 1px 2px rgb(0 0 0 / 0.12) inset;
+}
+
+.hud-footer__language-button:focus-visible,
+.hud-footer__screen-button:focus-visible,
+.hud-footer__project-button:focus-visible {
+  outline: 2px solid #495057;
+  outline-offset: 2px;
 }
 
 .hud-footer__screen-icon {
@@ -437,33 +434,6 @@ ul {
   gap: 0.5rem;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
-}
-
-.hud-footer__project-button {
-  align-items: center;
-  background-color: #adb5bd;
-  border-bottom: 2px solid #6f757a;
-  border-left: 2px solid #d2d8dc;
-  border-right: 2px solid #8b9196;
-  border-top: 2px solid #d2d8dc;
-  box-shadow:
-    0 1px 0 rgb(255 255 255 / 0.3) inset,
-    0 1px 2px rgb(0 0 0 / 0.12);
-  color: #101010;
-  cursor: pointer;
-  display: inline-flex;
-  font-size: 1.25rem;
-  height: 2rem;
-  justify-content: center;
-  width: 2rem;
-}
-
-.hud-footer__project-button:active {
-  border-bottom: 2px solid #d2d8dc;
-  border-left: 2px solid #8b9196;
-  border-right: 2px solid #d2d8dc;
-  border-top: 2px solid #6f757a;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.12) inset;
 }
 
 .hud-footer__experience-list {
@@ -527,15 +497,7 @@ ul {
 }
 
 .project-modal__close {
-  align-items: center;
-  background-color: #adb5bd;
-  border: 2px solid #6c757d;
-  cursor: pointer;
-  display: inline-flex;
-  height: 2rem;
-  justify-content: center;
   right: 0.1rem;
-  margin-bottom: 1rem;
   position: absolute;
   top: 0.1rem;
   width: 2rem;
@@ -588,6 +550,7 @@ ul {
   }
 
   .hud-screen {
+    gap: 0.5rem;
     grid-template-columns: 1fr;
     height: auto;
     min-height: 100%;
@@ -597,6 +560,10 @@ ul {
 
   .hud-screen__panel {
     padding: 0.5rem;
+  }
+
+  .hud-screen__label {
+    margin-bottom: 0.5rem;
   }
 
   .hud-screen__heading {

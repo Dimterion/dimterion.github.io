@@ -387,6 +387,7 @@ const createProjectModal = (project) => {
       </button>
       <h2 class="project-modal__title" id="${project.id}-title">${project.title}</h2>
       <p class="project-modal__label">${project.label}</p>
+      ${project.image ? `<img class="project-modal__image" src="${project.image.link}" alt="${project.image.description || ""}">` : ""}
       <p class="project-modal__text">${project.description}</p>
       ${
         stackMarkup

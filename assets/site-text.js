@@ -155,6 +155,10 @@ export const siteText = {
               href: "https://github.com/Dimterion/stories-platform",
             },
           ],
+          image: {
+            link: "https://raw.githubusercontent.com/Dimterion/stories-platform/main/public/screenshots/story-player-view.jpg",
+            description: "Interactive Stories Platform",
+          },
         },
         {
           id: "project-02",

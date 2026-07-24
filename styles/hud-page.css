@@ -292,11 +292,6 @@ ul {
   width: 0.9rem;
 }
 
-.hud-footer__panel--link:focus-visible {
-  outline: 2px solid #495057;
-  outline-offset: -2px;
-}
-
 .hud-footer__value {
   font-size: 2.5rem;
   grid-area: value;
@@ -393,9 +388,12 @@ ul {
   box-shadow: 0 1px 2px rgb(0 0 0 / 0.12) inset;
 }
 
+.hud-footer__panel--link:focus-visible,
 .hud-footer__language-button:focus-visible,
 .hud-footer__screen-button:focus-visible,
-.hud-footer__project-button:focus-visible {
+.hud-footer__project-button:focus-visible,
+.project-modal__close:focus-visible,
+.project-modal__link:focus-visible {
   outline: 2px solid #495057;
   outline-offset: 2px;
 }
@@ -474,8 +472,10 @@ ul {
   border: 4px solid #6c757d;
   color: #101010;
   left: 50%;
+  max-height: calc(100dvh - 4rem);
   max-width: 40rem;
   opacity: 0;
+  overflow-y: auto;
   padding: 2rem;
   position: fixed;
   top: 0;
@@ -516,6 +516,24 @@ ul {
   font-size: 2rem;
   line-height: 1;
   margin: 1rem 0;
+}
+
+.project-modal__image {
+  background-color: #bfc5ca;
+  border-bottom: 2px solid #6f757a;
+  border-left: 2px solid #d2d8dc;
+  border-right: 2px solid #8b9196;
+  border-top: 2px solid #d2d8dc;
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 0.25) inset,
+    0 2px 4px rgb(0 0 0 / 0.12);
+  display: block;
+  height: auto;
+  margin: 1rem auto;
+  max-height: 500px;
+  max-width: 500px;
+  object-fit: contain;
+  width: 100%;
 }
 
 .project-modal__text {

@@ -385,18 +385,20 @@ const createProjectModal = (project) => {
       <button class="project-modal__close" data-modal-close type="button" aria-label="${text.projects.aria.closeModal}">
         X
       </button>
-      <h2 class="project-modal__title" id="${project.id}-title">${project.title}</h2>
-      <p class="project-modal__label">${project.label}</p>
-      ${project.image ? `<img class="project-modal__image" src="${project.image.link}" alt="${project.image.description || ""}">` : ""}
-      <p class="project-modal__text">${project.description}</p>
-      ${
-        stackMarkup
-          ? `<ul class="project-modal__stack" aria-label="${text.projects.stackLabel}">
-        ${stackMarkup}
-      </ul>`
-          : ""
-      }
-      ${linksMarkup ? `<ul class="project-modal__links">${linksMarkup}</ul>` : ""}
+      <div class="project-modal__body">
+        <h2 class="project-modal__title" id="${project.id}-title">${project.title}</h2>
+        <p class="project-modal__label">${project.label}</p>
+        ${project.image ? `<img class="project-modal__image" src="${project.image.link}" alt="${project.image.description || ""}">` : ""}
+        <p class="project-modal__text">${project.description}</p>
+        ${
+          stackMarkup
+            ? `<ul class="project-modal__stack" aria-label="${text.projects.stackLabel}">
+          ${stackMarkup}
+        </ul>`
+            : ""
+        }
+        ${linksMarkup ? `<ul class="project-modal__links">${linksMarkup}</ul>` : ""}
+      </div>
     </article>
   `;
 

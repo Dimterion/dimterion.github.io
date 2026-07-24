@@ -252,6 +252,10 @@ export const siteText = {
               href: "https://github.com/Dimterion/PoTW-GO/",
             },
           ],
+          image: {
+            link: "https://raw.githubusercontent.com/Dimterion/PoTW/master/src/assets/potw_readme_header.svg",
+            description: "Interactive Text Adventures",
+          },
         },
       ],
     },

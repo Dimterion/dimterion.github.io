@@ -471,12 +471,14 @@ ul {
   background-color: #ced4da;
   border: 4px solid #6c757d;
   color: #101010;
+  display: flex;
+  flex-direction: column;
   left: 50%;
   max-height: calc(100dvh - 4rem);
   max-width: 40rem;
   opacity: 0;
-  overflow-y: auto;
-  padding: 2rem;
+  overflow: hidden;
+  padding: 0;
   position: fixed;
   top: 0;
   transform: translate(-50%, -100%);
@@ -497,10 +499,16 @@ ul {
 }
 
 .project-modal__close {
-  right: 0.1rem;
   position: absolute;
-  top: 0.1rem;
-  width: 2rem;
+  right: 0.5rem;
+  top: 0.5rem;
+  z-index: 1;
+}
+
+.project-modal__body {
+  overflow-y: auto;
+  padding: 2rem 1.25rem 2rem 2rem;
+  scrollbar-gutter: stable;
 }
 
 .project-modal__label {

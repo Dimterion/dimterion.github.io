@@ -385,12 +385,16 @@ const createProjectModal = (project) => {
       <button class="project-modal__close" data-modal-close type="button" aria-label="${text.projects.aria.closeModal}">
         X
       </button>
-      <p class="project-modal__label">${project.label}</p>
       <h2 class="project-modal__title" id="${project.id}-title">${project.title}</h2>
+      <p class="project-modal__label">${project.label}</p>
       <p class="project-modal__text">${project.description}</p>
-      <ul class="project-modal__stack" aria-label="${text.projects.stackLabel}">
+      ${
+        stackMarkup
+          ? `<ul class="project-modal__stack" aria-label="${text.projects.stackLabel}">
         ${stackMarkup}
-      </ul>
+      </ul>`
+          : ""
+      }
       ${linksMarkup ? `<ul class="project-modal__links">${linksMarkup}</ul>` : ""}
     </article>
   `;

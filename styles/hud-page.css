@@ -504,19 +504,64 @@ ul {
 }
 
 .project-modal__label {
+  border-bottom: 1px solid #101010;
   font-size: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  font-style: italic;
+  width: fit-content;
 }
 
 .project-modal__title {
   font-size: 2rem;
   line-height: 1;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .project-modal__text {
   font-size: 1.25rem;
   line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.project-modal__stack {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.project-modal__stack-item {
+  border: 1px solid #101010;
+  padding: 0.05rem 0.25rem;
+}
+
+.project-modal__links {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+}
+
+.project-modal__link {
+  color: #101010;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.project-modal__link:hover {
+  color: #4f555a;
+}
+
+.project-modal__link::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='2' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpath d='M14 5h5v5'/%3E%3Cpath d='M10 14 19 5'/%3E%3Cpath d='M19 14v5H5V5h5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 0.9rem;
+  position: absolute;
+  right: -1rem;
+  top: 0.25rem;
+  width: 0.9rem;
 }
 
 @media (max-width: 768px) {
@@ -666,6 +711,10 @@ ul {
   .hud-footer__project-button {
     height: 1.5rem;
     width: 1.5rem;
+  }
+
+  .project-modal__link {
+    font-size: 1.25rem;
   }
 }
 

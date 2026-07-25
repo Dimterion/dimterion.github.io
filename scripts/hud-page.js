@@ -195,6 +195,8 @@ const applyStaticText = () => {
 const createScreenMarkup = (screen) => {
   const text = getText();
 
+  const links = screen.links ?? [];
+
   const itemsMarkup = screen.items
     .map(
       (item) => `
@@ -202,6 +204,18 @@ const createScreenMarkup = (screen) => {
           <p class="hud-screen__meta">${item}</p>
         </li>
       `,
+    )
+    .join("");
+
+  const linksMarkup = links
+    .map(
+      (link) => `
+      <li class="hud-screen__link-item">
+        <a class="hud-screen__link" href="${link.href}" rel="noopener noreferrer" target="_blank">
+          ${link.label}
+        </a>
+      </li>
+    `,
     )
     .join("");
 
@@ -216,6 +230,7 @@ const createScreenMarkup = (screen) => {
       <ul class="hud-screen__list">
         ${itemsMarkup}
       </ul>
+       ${linksMarkup ? `<ul class="hud-screen__links">${linksMarkup}</ul>` : ""}
     </div>
   `;
 };

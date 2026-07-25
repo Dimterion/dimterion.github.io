@@ -125,6 +125,27 @@ export const siteText = {
             "Writing different kinds of stories and sharing some of them online.",
           ],
         },
+        {
+          id: "screen-05",
+          label: "05",
+          title: "Links",
+          text: "Check the links to my main profiles. Feel free to contact me wherever you want.",
+          items: [],
+          links: [
+            {
+              label: "Website",
+              href: "https://www.dimterion.com/",
+            },
+            {
+              label: "GitHub",
+              href: "https://github.com/Dimterion",
+            },
+          ],
+          image: {
+            link: "https://raw.githubusercontent.com/Dimterion/stories-platform/main/public/screenshots/story-player-view.jpg",
+            description: "Interactive Stories Platform",
+          },
+        },
       ],
     },
 
@@ -387,6 +408,27 @@ export const siteText = {
             "Écriture de différents types d’histoires et publication de certaines d’entre elles en ligne.",
           ],
         },
+        {
+          id: "screen-05",
+          label: "05",
+          title: "Liens",
+          text: "Consultez les liens vers mes profils principaux. N’hésitez pas à me contacter où vous préférez.",
+          items: [],
+          links: [
+            {
+              label: "Site Web",
+              href: "https://www.dimterion.com/",
+            },
+            {
+              label: "GitHub",
+              href: "https://github.com/Dimterion",
+            },
+          ],
+          image: {
+            link: "https://raw.githubusercontent.com/Dimterion/stories-platform/main/public/screenshots/story-player-view.jpg",
+            description: "Plateforme d’histoires interactives",
+          },
+        },
       ],
     },
 
@@ -417,6 +459,10 @@ export const siteText = {
               href: "https://github.com/Dimterion/stories-platform",
             },
           ],
+          image: {
+            link: "https://raw.githubusercontent.com/Dimterion/stories-platform/main/public/screenshots/story-player-view.jpg",
+            description: "Plateforme d’histoires interactives",
+          },
         },
         {
           id: "project-02",
@@ -512,6 +558,10 @@ export const siteText = {
               href: "https://github.com/Dimterion/PoTW-GO/",
             },
           ],
+          image: {
+            link: "https://raw.githubusercontent.com/Dimterion/PoTW/master/src/assets/potw_readme_header.svg",
+            description: "Aventures textuelles interactives",
+          },
         },
       ],
     },

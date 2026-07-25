@@ -140,6 +140,22 @@ export const siteText = {
               label: "GitHub",
               href: "https://github.com/Dimterion",
             },
+            {
+              label: "Medium Blog",
+              href: "https://medium.com/@dimterion",
+            },
+            {
+              label: "LinkedIn",
+              href: "https://www.linkedin.com/in/dmitrii-p/",
+            },
+            {
+              label: "X-Twitter",
+              href: "https://x.com/Dimterion",
+            },
+            {
+              label: "Bluesky",
+              href: "https://bsky.app/profile/dimterion.com",
+            },
           ],
           image: {
             link: "https://raw.githubusercontent.com/Dimterion/stories-platform/main/public/screenshots/story-player-view.jpg",
@@ -422,6 +438,22 @@ export const siteText = {
             {
               label: "GitHub",
               href: "https://github.com/Dimterion",
+            },
+            {
+              label: "Medium Blog",
+              href: "https://medium.com/@dimterion",
+            },
+            {
+              label: "LinkedIn",
+              href: "https://www.linkedin.com/in/dmitrii-p/",
+            },
+            {
+              label: "X-Twitter",
+              href: "https://x.com/Dimterion",
+            },
+            {
+              label: "Bluesky",
+              href: "https://bsky.app/profile/dimterion.com",
             },
           ],
           image: {

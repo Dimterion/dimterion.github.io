@@ -189,7 +189,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/isp_main_img.svg",
+            link: "../assets/isp_main_img.png",
             description: "Interactive Stories Platform",
           },
         },
@@ -211,6 +211,10 @@ export const siteText = {
               href: "https://github.com/Dimterion/personal-site",
             },
           ],
+          image: {
+            link: "../assets/personal_site_main_img.png",
+            description: "Dimterion personal site",
+          },
         },
         {
           id: "project-03",
@@ -229,6 +233,10 @@ export const siteText = {
               href: "https://github.com/Dimterion/stories-db",
             },
           ],
+          image: {
+            link: "../assets/stories_site_main_img.png",
+            description: "Dimterion's stories site",
+          },
         },
         {
           id: "project-04",
@@ -286,7 +294,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/potw_main_img.svg",
+            link: "../assets/potw_main_img.png",
             description: "Interactive Text Adventures",
           },
         },
@@ -484,7 +492,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/isp_main_img.svg",
+            link: "../assets/isp_main_img.png",
             description: "Plateforme d’histoires interactives",
           },
         },
@@ -506,6 +514,10 @@ export const siteText = {
               href: "https://github.com/Dimterion/personal-site",
             },
           ],
+          image: {
+            link: "../assets/personal_site_main_img.png",
+            description: "Site personnel de Dimterion",
+          },
         },
         {
           id: "project-03",
@@ -525,6 +537,10 @@ export const siteText = {
               href: "https://github.com/Dimterion/stories-db",
             },
           ],
+          image: {
+            link: "../assets/stories_site_main_img.png",
+            description: "Le site d'histoires de Dimterion",
+          },
         },
         {
           id: "project-04",
@@ -583,7 +599,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/potw_main_img.svg",
+            link: "../assets/potw_main_img.png",
             description: "Aventures textuelles interactives",
           },
         },

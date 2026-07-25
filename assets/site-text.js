@@ -156,6 +156,10 @@ export const siteText = {
               label: "Bluesky",
               href: "https://bsky.app/profile/dimterion.com",
             },
+            {
+              label: "Royal Road",
+              href: "https://www.royalroad.com/profile/769467/fictions",
+            },
           ],
         },
       ],
@@ -251,6 +255,10 @@ export const siteText = {
               href: "https://medium.com/@dimterion",
             },
           ],
+          image: {
+            link: "../assets/medium_profile_main_img.png",
+            description: "Dimterion's Medium blog",
+          },
         },
         {
           id: "project-05",
@@ -266,6 +274,10 @@ export const siteText = {
               href: "https://github.com/Dimterion",
             },
           ],
+          image: {
+            link: "../assets/github_profile_main_img.png",
+            description: "Dimterion's GitHub contributions streak",
+          },
         },
         {
           id: "project-06",
@@ -459,6 +471,10 @@ export const siteText = {
               label: "Bluesky",
               href: "https://bsky.app/profile/dimterion.com",
             },
+            {
+              label: "Royal Road",
+              href: "https://www.royalroad.com/profile/769467/fictions",
+            },
           ],
         },
       ],
@@ -556,6 +572,10 @@ export const siteText = {
               href: "https://medium.com/@dimterion",
             },
           ],
+          image: {
+            link: "../assets/medium_profile_main_img.png",
+            description: "Le blog Medium de Dimterion",
+          },
         },
         {
           id: "project-05",
@@ -571,6 +591,10 @@ export const siteText = {
               href: "https://github.com/Dimterion",
             },
           ],
+          image: {
+            link: "../assets/github_profile_main_img.png",
+            description: "Série de contributions GitHub de Dimterion",
+          },
         },
         {
           id: "project-06",

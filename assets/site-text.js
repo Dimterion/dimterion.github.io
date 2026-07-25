@@ -157,10 +157,6 @@ export const siteText = {
               href: "https://bsky.app/profile/dimterion.com",
             },
           ],
-          image: {
-            link: "https://raw.githubusercontent.com/Dimterion/stories-platform/main/public/screenshots/story-player-view.jpg",
-            description: "Interactive Stories Platform",
-          },
         },
       ],
     },
@@ -290,7 +286,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "https://raw.githubusercontent.com/Dimterion/PoTW/master/src/assets/potw_readme_header.svg",
+            link: "../assets/potw_main_img.svg",
             description: "Interactive Text Adventures",
           },
         },
@@ -456,10 +452,6 @@ export const siteText = {
               href: "https://bsky.app/profile/dimterion.com",
             },
           ],
-          image: {
-            link: "https://raw.githubusercontent.com/Dimterion/stories-platform/main/public/screenshots/story-player-view.jpg",
-            description: "Plateforme d’histoires interactives",
-          },
         },
       ],
     },
@@ -591,7 +583,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "https://raw.githubusercontent.com/Dimterion/PoTW/master/src/assets/potw_readme_header.svg",
+            link: "../assets/potw_main_img.svg",
             description: "Aventures textuelles interactives",
           },
         },

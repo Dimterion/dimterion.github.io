@@ -193,7 +193,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "https://raw.githubusercontent.com/Dimterion/stories-platform/main/public/screenshots/story-player-view.jpg",
+            link: "../assets/isp_main_img.svg",
             description: "Interactive Stories Platform",
           },
         },
@@ -492,7 +492,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "https://raw.githubusercontent.com/Dimterion/stories-platform/main/public/screenshots/story-player-view.jpg",
+            link: "../assets/isp_main_img.svg",
             description: "Plateforme d’histoires interactives",
           },
         },

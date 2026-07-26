@@ -335,7 +335,7 @@ ul {
   align-items: center;
   color: #101010;
   display: grid;
-  gap: 0.35rem;
+  gap: 0.25rem;
   grid-template-areas:
     "value"
     "icon"
@@ -734,7 +734,6 @@ ul {
 
   .hud-footer {
     align-items: stretch;
-    gap: 0.25rem;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     grid-template-rows: auto auto;
     justify-items: stretch;
@@ -770,6 +769,7 @@ ul {
 
   .hud-footer__panel {
     height: 100%;
+    gap: 0.25rem;
     max-width: none;
     padding: 0.25rem;
     width: 100%;
@@ -785,7 +785,7 @@ ul {
   }
 
   .hud-footer__label {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .hud-footer__portrait-group {
@@ -801,6 +801,10 @@ ul {
 
   .hud-footer__project-grid {
     width: 100%;
+  }
+
+  .hud-footer__experience-list {
+    gap: 0.25rem;
   }
 
   .hud-footer__language-button,

@@ -209,14 +209,15 @@ ul {
 }
 
 .hud-screen__link {
-  color: #adb5bd;
-  font-size: 1.25rem;
   position: relative;
-  text-transform: uppercase;
+  text-decoration: none;
 }
 
-.hud-screen__link:hover {
+.hud-screen__link:hover,
+.hud-screen__link:focus-visible {
   color: #dee2e6;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
 }
 
 .hud-screen__link:focus-visible {
@@ -228,12 +229,16 @@ ul {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23adb5bd' stroke-width='2' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpath d='M14 5h5v5'/%3E%3Cpath d='M10 14 19 5'/%3E%3Cpath d='M19 14v5H5V5h5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: contain;
-  bottom: 0.25rem;
   content: "";
-  height: 0.9rem;
+  height: 1rem;
   position: absolute;
   right: -1.25rem;
-  width: 0.9rem;
+  width: 1rem;
+}
+
+.hud-screen__link:hover::after,
+.hud-screen__link:focus-visible::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dee2e6' stroke-width='2' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpath d='M14 5h5v5'/%3E%3Cpath d='M10 14 19 5'/%3E%3Cpath d='M19 14v5H5V5h5'/%3E%3C/svg%3E");
 }
 
 .hud-screen--enter-from-right {

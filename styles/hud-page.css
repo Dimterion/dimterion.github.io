@@ -46,8 +46,11 @@ ul {
 .hud-page__main {
   display: flex;
   flex: 1 1 auto;
+  margin-inline: auto;
+  max-width: 2560px;
   min-height: 0;
   overflow: hidden;
+  width: 100%;
 }
 
 .hud {

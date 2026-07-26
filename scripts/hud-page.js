@@ -89,7 +89,7 @@ const portraitImage = document.querySelector("[data-portrait-image]");
 
 const animationDuration = 220;
 const screenAnimationDuration = 280;
-const mobileBreakpoint = 900;
+const mobileBreakpoint = 768;
 
 const isMobileLayout = () => window.innerWidth <= mobileBreakpoint;
 
@@ -506,3 +506,9 @@ const init = () => {
 };
 
 init();
+
+window.addEventListener("load", () => {
+  window.setTimeout(() => {
+    document.body.classList.remove("hud-page--intro");
+  }, 900);
+});

@@ -742,29 +742,45 @@ ul {
 .project-modal__links {
   display: flex;
   flex-flow: column nowrap;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .project-modal__link {
+  border-left: 2px solid #101010;
   color: #101010;
   font-size: 1.5rem;
+  padding-left: 0.75rem;
   position: relative;
+  text-decoration: none;
 }
 
-.project-modal__link:hover {
+.project-modal__link:hover,
+.project-modal__link:focus-visible {
   color: #4f555a;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.project-modal__link:focus-visible {
+  outline: 2px solid #495057;
+  outline-offset: 2px;
 }
 
 .project-modal__link::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='2' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpath d='M14 5h5v5'/%3E%3Cpath d='M10 14 19 5'/%3E%3Cpath d='M19 14v5H5V5h5'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23101010' stroke-width='2' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpath d='M14 5h5v5'/%3E%3Cpath d='M10 14 19 5'/%3E%3Cpath d='M19 14v5H5V5h5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
-  height: 0.9rem;
+  height: 1rem;
   position: absolute;
-  right: -1rem;
-  top: 0.25rem;
-  width: 0.9rem;
+  right: -1.25rem;
+  top: 0.15rem;
+  width: 1rem;
+}
+
+.project-modal__link:hover::after,
+.project-modal__link:focus-visible::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234f555a' stroke-width='2' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpath d='M14 5h5v5'/%3E%3Cpath d='M10 14 19 5'/%3E%3Cpath d='M19 14v5H5V5h5'/%3E%3C/svg%3E");
 }
 
 @media (min-width: 2560px) {
@@ -932,7 +948,14 @@ ul {
   }
 
   .project-modal__link {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    padding-left: 0.5rem;
+  }
+
+  .project-modal__link::after {
+    height: 0.8rem;
+    right: -1rem;
+    width: 0.8rem;
   }
 }
 

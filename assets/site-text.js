@@ -181,7 +181,7 @@ export const siteText = {
           title: "Interactive Stories Platform",
           description:
             "A tool for creating interactive branching stories with multiple choices and outcomes.",
-          stack: ["React", "TypeScript", "Tailwind CSS"],
+          stack: [],
           links: [
             {
               label: "Live Version",
@@ -204,7 +204,7 @@ export const siteText = {
           title: "dimterion.com",
           description:
             "Personal website, blog, project space, and contact hub.",
-          stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+          stack: [],
           links: [
             {
               label: "Live Version",
@@ -226,7 +226,7 @@ export const siteText = {
           label: "Storytelling",
           title: "Dimterion's stories",
           description: "A website that hosts a collection of personal stories.",
-          stack: ["React", "JavaScript", "CSS"],
+          stack: [],
           links: [
             {
               label: "Live Version",
@@ -286,22 +286,22 @@ export const siteText = {
           title: "Poets of Tomorrow’s World",
           description:
             "Interactive fiction projects with multiple choices and branching outcomes.",
-          stack: ["React", "JavaScript", "CSS"],
+          stack: [],
           links: [
             {
-              label: "Live Version - 01",
+              label: "Live Version - Part 1",
               href: "https://poets-of-tomorrows-world.vercel.app/",
             },
             {
-              label: "GitHub Repo - 01",
+              label: "GitHub Repo - Part 1",
               href: "https://github.com/Dimterion/PoTW",
             },
             {
-              label: "Live Version - 02",
+              label: "Live Version - Part 2",
               href: "https://profound-cat-a609de.netlify.app/",
             },
             {
-              label: "GitHub Repo - 02",
+              label: "GitHub Repo - Part 2",
               href: "https://github.com/Dimterion/PoTW-GO/",
             },
           ],
@@ -496,7 +496,7 @@ export const siteText = {
           title: "Plateforme d’histoires interactives",
           description:
             "Un outil pour créer des histoires interactives à embranchements avec plusieurs choix et plusieurs issues.",
-          stack: ["React", "TypeScript", "Tailwind CSS"],
+          stack: [],
           links: [
             {
               label: "Version en ligne",
@@ -519,7 +519,7 @@ export const siteText = {
           title: "dimterion.com",
           description:
             "Site personnel, blog, espace projets et point de contact.",
-          stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+          stack: [],
           links: [
             {
               label: "Version en ligne",
@@ -542,7 +542,7 @@ export const siteText = {
           title: "Les histoires de Dimterion",
           description:
             "Un site qui regroupe une collection d’histoires personnelles.",
-          stack: ["React", "JavaScript", "CSS"],
+          stack: [],
           links: [
             {
               label: "Version en ligne",
@@ -603,22 +603,22 @@ export const siteText = {
           title: "Poets of Tomorrow’s World",
           description:
             "Des projets de fiction interactive avec plusieurs choix et des embranchements narratifs.",
-          stack: ["React", "JavaScript", "CSS"],
+          stack: [],
           links: [
             {
-              label: "Version en ligne - 01",
+              label: "Version en ligne - Partie 1",
               href: "https://poets-of-tomorrows-world.vercel.app/",
             },
             {
-              label: "Repo GitHub - 01",
+              label: "Repo GitHub - Partie 1",
               href: "https://github.com/Dimterion/PoTW",
             },
             {
-              label: "Version en ligne - 02",
+              label: "Version en ligne - Partie 2",
               href: "https://profound-cat-a609de.netlify.app/",
             },
             {
-              label: "Repo GitHub - 02",
+              label: "Repo GitHub - Partie 2",
               href: "https://github.com/Dimterion/PoTW-GO/",
             },
           ],

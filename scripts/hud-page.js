@@ -3,6 +3,45 @@ import { siteText } from "../assets/site-text.js";
 const supportedLocales = ["en", "fr"];
 const localeStorageKey = "hud-language";
 
+const animationDuration = 220;
+const screenAnimationDuration = 280;
+const mobileBreakpoint = 768;
+
+const metaDescription = document.querySelector('meta[name="description"]');
+
+const pageTitle = document.querySelector("[data-page-title]");
+const pageSubtitle = document.querySelector("[data-page-subtitle]");
+const screenContainer = document.querySelector("[data-screen-container]");
+const scrollArea = document.querySelector(".hud__scroll-area");
+
+const footerGithubValue = document.querySelector("[data-footer-github-value]");
+const footerGithubLabel = document.querySelector("[data-footer-github-label]");
+const footerMediumValue = document.querySelector("[data-footer-medium-value]");
+const footerMediumLabel = document.querySelector("[data-footer-medium-label]");
+
+const languageButtons = document.querySelectorAll("[data-language-button]");
+const previousScreenButton = document.querySelector(
+  "[data-screen-previous-button]",
+);
+const nextScreenButton = document.querySelector("[data-screen-next-button]");
+const screenNavigationButtons = document.querySelectorAll(
+  "[data-screen-direction]",
+);
+const portraitImage = document.querySelector("[data-portrait-image]");
+
+const projectGrid = document.querySelector("[data-project-grid]");
+const footerProjectsLabel = document.querySelector(
+  "[data-footer-projects-label]",
+);
+const footerExperienceList = document.querySelector(
+  "[data-footer-experience-list]",
+);
+const footerExperienceLabel = document.querySelector(
+  "[data-footer-experience-label]",
+);
+
+const modalContainer = document.querySelector("[data-modal-container]");
+
 const normalizeLocale = (locale) => {
   if (typeof locale !== "string") {
     return "en";
@@ -43,10 +82,13 @@ const getBrowserLocale = () => {
 };
 
 const getInitialLocale = () => getSavedLocale() ?? getBrowserLocale();
+const getText = () => siteText[currentLocale];
+const isMobileLayout = () => window.innerWidth <= mobileBreakpoint;
 
 let currentLocale = getInitialLocale();
-
-const getText = () => siteText[currentLocale];
+let activeScreenIndex = 0;
+let isScreenAnimating = false;
+let lastTriggerButton = null;
 
 const saveLocalePreference = (locale) => {
   try {
@@ -56,50 +98,9 @@ const saveLocalePreference = (locale) => {
   }
 };
 
-const metaDescription = document.querySelector('meta[name="description"]');
-const screenContainer = document.querySelector("[data-screen-container]");
-const scrollArea = document.querySelector(".hud__scroll-area");
-const projectGrid = document.querySelector("[data-project-grid]");
-const screenNavigationButtons = document.querySelectorAll(
-  "[data-screen-direction]",
-);
-const modalContainer = document.querySelector("[data-modal-container]");
-
-const pageTitle = document.querySelector("[data-page-title]");
-const pageSubtitle = document.querySelector("[data-page-subtitle]");
-const footerGithubValue = document.querySelector("[data-footer-github-value]");
-const footerGithubLabel = document.querySelector("[data-footer-github-label]");
-const footerMediumValue = document.querySelector("[data-footer-medium-value]");
-const footerMediumLabel = document.querySelector("[data-footer-medium-label]");
-const footerProjectsLabel = document.querySelector(
-  "[data-footer-projects-label]",
-);
-const footerExperienceLabel = document.querySelector(
-  "[data-footer-experience-label]",
-);
-const footerExperienceList = document.querySelector(
-  "[data-footer-experience-list]",
-);
-const languageButtons = document.querySelectorAll("[data-language-button]");
-const previousScreenButton = document.querySelector(
-  "[data-screen-previous-button]",
-);
-const nextScreenButton = document.querySelector("[data-screen-next-button]");
-const portraitImage = document.querySelector("[data-portrait-image]");
-
-const animationDuration = 220;
-const screenAnimationDuration = 280;
-const mobileBreakpoint = 768;
-
-const isMobileLayout = () => window.innerWidth <= mobileBreakpoint;
-
-let activeScreenIndex = 0;
-let isScreenAnimating = false;
-let lastTriggerButton = null;
-
 const updateLanguageButtons = () => {
   const text = getText();
-  const languageSwitcher = text.footer.languageSwitcher;
+  const { languageSwitcher } = text.footer;
 
   languageButtons.forEach((button) => {
     const buttonLocale = button.dataset.language;
@@ -118,34 +119,57 @@ const updateLanguageButtons = () => {
   });
 };
 
-const setLanguage = (locale) => {
-  const normalizedLocale = normalizeLocale(locale);
+const createScreenMarkup = (screen) => {
+  const text = getText();
+  const links = screen.links ?? [];
 
-  if (normalizedLocale === currentLocale) {
-    return;
-  }
+  const itemsMarkup = screen.items
+    .map(
+      (item) => `
+        <li class="hud-screen__list-item">
+          <p class="hud-screen__meta">${item}</p>
+        </li>
+      `,
+    )
+    .join("");
 
-  currentLocale = normalizedLocale;
-  saveLocalePreference(currentLocale);
-  applyStaticText();
-  renderCurrentScreen();
-  renderProjects();
+  const linksMarkup = links
+    .map(
+      (link) => `
+        <li class="hud-screen__link-item">
+          <a class="hud-screen__link" href="${link.href}" rel="noopener noreferrer" target="_blank">
+            ${link.label}
+          </a>
+        </li>
+      `,
+    )
+    .join("");
+
+  return `
+    <div class="hud-screen__panel">
+      <p class="hud-screen__label">${screen.label}</p>
+      <h2 class="hud-screen__heading">${screen.title}</h2>
+      <p class="hud-screen__text">${screen.text}</p>
+    </div>
+    <div class="hud-screen__panel">
+      <p class="hud-screen__label">${text.screens.scanDataLabel}</p>
+      <ul class="hud-screen__list">
+        ${itemsMarkup}
+      </ul>
+      ${linksMarkup ? `<ul class="hud-screen__links">${linksMarkup}</ul>` : ""}
+    </div>
+  `;
 };
 
-const bindLanguageButtons = () => {
-  languageButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      setLanguage(button.dataset.language);
-    });
-  });
+const renderScreen = (screenIndex) => {
+  const text = getText();
+  screenContainer.innerHTML = createScreenMarkup(
+    text.screens.items[screenIndex],
+  );
 };
 
 const renderCurrentScreen = () => {
-  const text = getText();
-
-  screenContainer.innerHTML = createScreenMarkup(
-    text.screens.items[activeScreenIndex],
-  );
+  renderScreen(activeScreenIndex);
 };
 
 const applyStaticText = () => {
@@ -165,6 +189,7 @@ const applyStaticText = () => {
   footerGithubLabel.textContent = text.footer.links.github.label;
   footerMediumValue.textContent = text.footer.links.medium.value;
   footerMediumLabel.textContent = text.footer.links.medium.label;
+
   footerProjectsLabel.textContent = text.footer.projects.label;
   footerExperienceLabel.textContent = text.footer.links.linkedin.label;
 
@@ -176,6 +201,7 @@ const applyStaticText = () => {
     "aria-label",
     text.footer.screenNavigation.next,
   );
+
   portraitImage.alt = text.footer.portrait.alt;
 
   footerExperienceList.innerHTML = text.footer.experience
@@ -192,47 +218,18 @@ const applyStaticText = () => {
   updateLanguageButtons();
 };
 
-const createScreenMarkup = (screen) => {
-  const text = getText();
+const setLanguage = (locale) => {
+  const normalizedLocale = normalizeLocale(locale);
 
-  const links = screen.links ?? [];
+  if (normalizedLocale === currentLocale) {
+    return;
+  }
 
-  const itemsMarkup = screen.items
-    .map(
-      (item) => `
-        <li class="hud-screen__list-item">
-          <p class="hud-screen__meta">${item}</p>
-        </li>
-      `,
-    )
-    .join("");
-
-  const linksMarkup = links
-    .map(
-      (link) => `
-      <li class="hud-screen__link-item">
-        <a class="hud-screen__link" href="${link.href}" rel="noopener noreferrer" target="_blank">
-          ${link.label}
-        </a>
-      </li>
-    `,
-    )
-    .join("");
-
-  return `
-    <div class="hud-screen__panel">
-      <p class="hud-screen__label">${screen.label}</p>
-      <h2 class="hud-screen__heading">${screen.title}</h2>
-      <p class="hud-screen__text">${screen.text}</p>
-    </div>
-    <div class="hud-screen__panel">
-      <p class="hud-screen__label">${text.screens.scanDataLabel}</p>
-      <ul class="hud-screen__list">
-        ${itemsMarkup}
-      </ul>
-       ${linksMarkup ? `<ul class="hud-screen__links">${linksMarkup}</ul>` : ""}
-    </div>
-  `;
+  currentLocale = normalizedLocale;
+  saveLocalePreference(currentLocale);
+  applyStaticText();
+  renderCurrentScreen();
+  renderProjects();
 };
 
 const goToScreen = (direction) => {
@@ -249,15 +246,13 @@ const goToScreen = (direction) => {
         text.screens.items.length;
 
   if (isMobileLayout()) {
-    screenContainer.innerHTML = createScreenMarkup(
-      text.screens.items[nextIndex],
-    );
     activeScreenIndex = nextIndex;
+    renderCurrentScreen();
 
     scrollArea?.scrollTo({
-      top: 0,
-      left: 0,
       behavior: "smooth",
+      left: 0,
+      top: 0,
     });
 
     return;
@@ -273,11 +268,11 @@ const goToScreen = (direction) => {
   nextScreen.innerHTML = createScreenMarkup(text.screens.items[nextIndex]);
 
   if (direction === "right") {
-    nextScreen.classList.add("hud-screen--enter-from-right");
     currentScreen.classList.add("hud-screen--exit-to-left");
+    nextScreen.classList.add("hud-screen--enter-from-right");
   } else {
-    nextScreen.classList.add("hud-screen--enter-from-left");
     currentScreen.classList.add("hud-screen--exit-to-right");
+    nextScreen.classList.add("hud-screen--enter-from-left");
   }
 
   currentScreen.parentElement.append(nextScreen);
@@ -291,66 +286,6 @@ const goToScreen = (direction) => {
     activeScreenIndex = nextIndex;
     isScreenAnimating = false;
   }, screenAnimationDuration);
-};
-
-const bindKeyboardControls = () => {
-  window.addEventListener("keydown", (event) => {
-    const target = event.target;
-
-    if (!(target instanceof Element)) {
-      return;
-    }
-
-    if (event.repeat) {
-      return;
-    }
-
-    if (target.closest("dialog[open]")) {
-      return;
-    }
-
-    if (target.matches("input, textarea, select") || target.isContentEditable) {
-      return;
-    }
-
-    if (event.key === "ArrowLeft") {
-      event.preventDefault();
-      goToScreen("left");
-      return;
-    }
-
-    if (event.key === "ArrowRight") {
-      event.preventDefault();
-      goToScreen("right");
-      return;
-    }
-
-    const projectIndex = Number.parseInt(event.key, 10) - 1;
-
-    if (Number.isNaN(projectIndex) || projectIndex < 0) {
-      return;
-    }
-
-    const projectButtons = document.querySelectorAll(
-      ".hud-footer__project-button",
-    );
-    const targetButton = projectButtons[projectIndex];
-
-    if (!targetButton) {
-      return;
-    }
-
-    event.preventDefault();
-    targetButton.click();
-  });
-};
-
-const bindScreenNavigationButtons = () => {
-  screenNavigationButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      goToScreen(button.dataset.screenDirection);
-    });
-  });
 };
 
 const createProjectButton = (project) => {
@@ -371,9 +306,10 @@ const createProjectButton = (project) => {
 
 const createProjectModal = (project) => {
   const text = getText();
+  const dialog = document.createElement("dialog");
+
   const links = project.links ?? [];
   const stack = project.stack ?? [];
-  const dialog = document.createElement("dialog");
 
   const linksMarkup = links
     .map(
@@ -403,13 +339,17 @@ const createProjectModal = (project) => {
       <div class="project-modal__body">
         <h2 class="project-modal__title" id="${project.id}-title">${project.title}</h2>
         <p class="project-modal__label">${project.label}</p>
-        ${project.image ? `<img class="project-modal__image" src="${project.image.link}" alt="${project.image.description || ""}">` : ""}
+        ${
+          project.image
+            ? `<img class="project-modal__image" src="${project.image.link}" alt="${project.image.description || ""}">`
+            : ""
+        }
         <p class="project-modal__text">${project.description}</p>
         ${
           stackMarkup
             ? `<ul class="project-modal__stack" aria-label="${text.projects.stackLabel}">
-          ${stackMarkup}
-        </ul>`
+                ${stackMarkup}
+              </ul>`
             : ""
         }
         ${linksMarkup ? `<ul class="project-modal__links">${linksMarkup}</ul>` : ""}
@@ -496,13 +436,82 @@ const renderProjects = () => {
   modalContainer.replaceChildren(modalsFragment);
 };
 
+const bindLanguageButtons = () => {
+  languageButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      setLanguage(button.dataset.language);
+    });
+  });
+};
+
+const bindScreenNavigationButtons = () => {
+  screenNavigationButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      goToScreen(button.dataset.screenDirection);
+    });
+  });
+};
+
+const bindKeyboardControls = () => {
+  window.addEventListener("keydown", (event) => {
+    const target = event.target;
+
+    if (!(target instanceof Element)) {
+      return;
+    }
+
+    if (event.repeat) {
+      return;
+    }
+
+    if (target.closest("dialog[open]")) {
+      return;
+    }
+
+    if (target.matches("input, textarea, select") || target.isContentEditable) {
+      return;
+    }
+
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      goToScreen("left");
+      return;
+    }
+
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      goToScreen("right");
+      return;
+    }
+
+    const projectIndex = Number.parseInt(event.key, 10) - 1;
+
+    if (Number.isNaN(projectIndex) || projectIndex < 0) {
+      return;
+    }
+
+    const projectButtons = document.querySelectorAll(
+      ".hud-footer__project-button",
+    );
+    const targetButton = projectButtons[projectIndex];
+
+    if (!targetButton) {
+      return;
+    }
+
+    event.preventDefault();
+    targetButton.click();
+  });
+};
+
 const init = () => {
   applyStaticText();
   renderCurrentScreen();
-  bindKeyboardControls();
-  bindScreenNavigationButtons();
-  bindLanguageButtons();
   renderProjects();
+
+  bindLanguageButtons();
+  bindScreenNavigationButtons();
+  bindKeyboardControls();
 };
 
 init();

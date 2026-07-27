@@ -83,7 +83,7 @@ export const siteText = {
           id: "screen-01",
           label: "01",
           title: "Bio",
-          text: "Technical consultant, product support specialist, and developer with 10+ years of experience working in the video games and financial industries. Check the interactive section below for projects, links, and additional details.",
+          text: "Technical consultant, product support specialist, and developer with 10+ years of experience in the video game and financial industries. Check the interactive section below for projects, links, and additional details.",
           items: [
             "Worked at Blizzard Entertainment for 9+ years.",
             "Based in France.",
@@ -94,7 +94,7 @@ export const siteText = {
           id: "screen-02",
           label: "02",
           title: "Skills",
-          text: "Proficient in multilingual product support, technical consultations, and web development. I also write articles, stories, and learning-focused content, and build websites and applications.",
+          text: "Experienced in multilingual product support, technical consulting, and web development. I also write articles, stories, and learning-focused content, and build websites and applications.",
           items: [
             "HTML, CSS, JavaScript / TypeScript",
             "React",
@@ -107,9 +107,9 @@ export const siteText = {
           id: "screen-03",
           label: "03",
           title: "Facts",
-          text: "I contribute to GitHub daily, publish on Medium weekly, track everything I read, watch, and play, and make time to learn and write every day.",
+          text: "I contribute to GitHub daily, publish on Medium weekly, track everything I read, watch, and play, and make time every day to learn and write.",
           items: [
-            "Daily GitHub contributions streak: 4+ years.",
+            "Daily GitHub contribution streak: 4+ years.",
             "Weekly Medium posts every Friday: 4+ years.",
             "Duolingo streak: 4,400+ days.",
           ],
@@ -129,7 +129,7 @@ export const siteText = {
           id: "screen-05",
           label: "05",
           title: "Links",
-          text: "Check the links to my main profiles. Feel free to contact me wherever you want.",
+          text: "Check the links to my main profiles. Feel free to contact me wherever you prefer.",
           items: [],
           links: [
             {
@@ -149,7 +149,7 @@ export const siteText = {
               href: "https://www.linkedin.com/in/dmitrii-p/",
             },
             {
-              label: "X-Twitter",
+              label: "X / Twitter",
               href: "https://x.com/Dimterion",
             },
             {
@@ -181,7 +181,7 @@ export const siteText = {
           title: "Interactive Stories Platform",
           description:
             "A tool for creating interactive branching stories with multiple choices and outcomes.",
-          stack: [],
+          stack: ["React", "TypeScript", "Tailwind CSS"],
           links: [
             {
               label: "Live Version",
@@ -204,7 +204,7 @@ export const siteText = {
           title: "dimterion.com",
           description:
             "Personal website, blog, project space, and contact hub.",
-          stack: [],
+          stack: ["Next.js", "TypeScript", "Tailwind CSS"],
           links: [
             {
               label: "Live Version",
@@ -224,9 +224,9 @@ export const siteText = {
           id: "project-03",
           buttonLabel: "3",
           label: "Storytelling",
-          title: "Dimterion's stories",
-          description: "A website that hosts a collection of personal stories.",
-          stack: [],
+          title: "Dimterion's Stories",
+          description: "A website hosting a collection of personal stories.",
+          stack: ["React", "JavaScript", "CSS"],
           links: [
             {
               label: "Live Version",
@@ -276,7 +276,7 @@ export const siteText = {
           ],
           image: {
             link: "../assets/github_profile_main_img.png",
-            description: "Dimterion's GitHub contributions streak",
+            description: "Dimterion's GitHub contribution streak",
           },
         },
         {
@@ -286,28 +286,28 @@ export const siteText = {
           title: "Poets of Tomorrow’s World",
           description:
             "Interactive fiction projects with multiple choices and branching outcomes.",
-          stack: [],
+          stack: ["React", "JavaScript", "CSS"],
           links: [
             {
-              label: "Live Version - Part 1",
+              label: "Live Version - 01",
               href: "https://poets-of-tomorrows-world.vercel.app/",
             },
             {
-              label: "GitHub Repo - Part 1",
+              label: "GitHub Repo - 01",
               href: "https://github.com/Dimterion/PoTW",
             },
             {
-              label: "Live Version - Part 2",
+              label: "Live Version - 02",
               href: "https://profound-cat-a609de.netlify.app/",
             },
             {
-              label: "GitHub Repo - Part 2",
+              label: "GitHub Repo - 02",
               href: "https://github.com/Dimterion/PoTW-GO/",
             },
           ],
           image: {
             link: "../assets/potw_main_img.png",
-            description: "Interactive Text Adventures",
+            description: "Interactive text adventures",
           },
         },
       ],
@@ -400,7 +400,7 @@ export const siteText = {
           title: "Profil",
           text: "Consultant technique, spécialiste du support produit et développeur avec plus de 10 ans d’expérience dans les secteurs du jeu vidéo et de la finance. Consultez la section interactive ci-dessous pour découvrir les projets, les liens et d’autres informations.",
           items: [
-            "9+ ans chez Blizzard Entertainment",
+            "9+ ans chez Blizzard Entertainment.",
             "Basé en France.",
             "Passionné par l’écriture, le code et les jeux.",
           ],
@@ -448,7 +448,7 @@ export const siteText = {
           items: [],
           links: [
             {
-              label: "Site Web",
+              label: "Site web",
               href: "https://www.dimterion.com/",
             },
             {
@@ -456,7 +456,7 @@ export const siteText = {
               href: "https://github.com/Dimterion",
             },
             {
-              label: "Medium Blog",
+              label: "Blog Medium",
               href: "https://medium.com/@dimterion",
             },
             {
@@ -464,7 +464,7 @@ export const siteText = {
               href: "https://www.linkedin.com/in/dmitrii-p/",
             },
             {
-              label: "X-Twitter",
+              label: "X / Twitter",
               href: "https://x.com/Dimterion",
             },
             {
@@ -496,7 +496,7 @@ export const siteText = {
           title: "Plateforme d’histoires interactives",
           description:
             "Un outil pour créer des histoires interactives à embranchements avec plusieurs choix et plusieurs issues.",
-          stack: [],
+          stack: ["React", "TypeScript", "Tailwind CSS"],
           links: [
             {
               label: "Version en ligne",
@@ -519,7 +519,7 @@ export const siteText = {
           title: "dimterion.com",
           description:
             "Site personnel, blog, espace projets et point de contact.",
-          stack: [],
+          stack: ["Next.js", "TypeScript", "Tailwind CSS"],
           links: [
             {
               label: "Version en ligne",
@@ -542,7 +542,7 @@ export const siteText = {
           title: "Les histoires de Dimterion",
           description:
             "Un site qui regroupe une collection d’histoires personnelles.",
-          stack: [],
+          stack: ["React", "JavaScript", "CSS"],
           links: [
             {
               label: "Version en ligne",
@@ -555,7 +555,7 @@ export const siteText = {
           ],
           image: {
             link: "../assets/stories_site_main_img.png",
-            description: "Le site d'histoires de Dimterion",
+            description: "Le site d’histoires de Dimterion",
           },
         },
         {
@@ -603,22 +603,22 @@ export const siteText = {
           title: "Poets of Tomorrow’s World",
           description:
             "Des projets de fiction interactive avec plusieurs choix et des embranchements narratifs.",
-          stack: [],
+          stack: ["React", "JavaScript", "CSS"],
           links: [
             {
-              label: "Version en ligne - Partie 1",
+              label: "Version en ligne - 01",
               href: "https://poets-of-tomorrows-world.vercel.app/",
             },
             {
-              label: "Repo GitHub - Partie 1",
+              label: "Repo GitHub - 01",
               href: "https://github.com/Dimterion/PoTW",
             },
             {
-              label: "Version en ligne - Partie 2",
+              label: "Version en ligne - 02",
               href: "https://profound-cat-a609de.netlify.app/",
             },
             {
-              label: "Repo GitHub - Partie 2",
+              label: "Repo GitHub - 02",
               href: "https://github.com/Dimterion/PoTW-GO/",
             },
           ],

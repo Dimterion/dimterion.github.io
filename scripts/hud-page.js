@@ -341,7 +341,15 @@ const createProjectModal = (project) => {
         <p class="project-modal__label">${project.label}</p>
         ${
           project.image
-            ? `<img class="project-modal__image" src="${project.image.link}" alt="${project.image.description || ""}">`
+            ? `<img
+                class="project-modal__image"
+                src="${project.image.link}"
+                alt="${project.image.description || ""}"
+                width="1000"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              >`
             : ""
         }
         <p class="project-modal__text">${project.description}</p>

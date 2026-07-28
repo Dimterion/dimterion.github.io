@@ -69,7 +69,7 @@ export const siteText = {
           value: "5+",
         },
         {
-          label: "Coding",
+          label: "Development",
           value: "4+",
         },
       ],
@@ -82,7 +82,7 @@ export const siteText = {
         {
           id: "screen-01",
           label: "01",
-          title: "Bio",
+          title: "Profile",
           text: "Technical consultant, product support specialist, and developer with 10+ years of experience in the video game and financial industries. Check the interactive section below for projects, links, and additional details.",
           items: [
             "Worked at Blizzard Entertainment for 9+ years.",
@@ -106,7 +106,7 @@ export const siteText = {
         {
           id: "screen-03",
           label: "03",
-          title: "Facts",
+          title: "Highlights",
           text: "I contribute to GitHub daily, publish on Medium weekly, track everything I read, watch, and play, and make time every day to learn and write.",
           items: [
             "Daily GitHub contribution streak: 4+ years.",
@@ -117,7 +117,7 @@ export const siteText = {
         {
           id: "screen-04",
           label: "04",
-          title: "Activities",
+          title: "Work",
           text: "Currently building a job search helper app and website, writing stories, and maintaining an interactive storytelling platform. Use the project buttons below to explore more.",
           items: [
             "Built a platform for creating interactive text adventures.",
@@ -384,7 +384,7 @@ export const siteText = {
           value: "5+",
         },
         {
-          label: "Code",
+          label: "Développement",
           value: "4+",
         },
       ],

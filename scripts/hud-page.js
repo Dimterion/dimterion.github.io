@@ -83,7 +83,6 @@ const getBrowserLocale = () => {
 
 const getInitialLocale = () => getSavedLocale() ?? getBrowserLocale();
 const getText = () => siteText[currentLocale];
-const isMobileLayout = () => window.innerWidth <= mobileBreakpoint;
 
 let currentLocale = getInitialLocale();
 let activeScreenIndex = 0;
@@ -245,20 +244,17 @@ const goToScreen = (direction) => {
       : (activeScreenIndex - 1 + text.screens.items.length) %
         text.screens.items.length;
 
-  if (isMobileLayout()) {
-    activeScreenIndex = nextIndex;
-    renderCurrentScreen();
-
-    scrollArea?.scrollTo({
-      behavior: "smooth",
-      left: 0,
-      top: 0,
-    });
-
-    return;
-  }
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
 
   isScreenAnimating = true;
+
+  scrollArea?.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: prefersReducedMotion ? "auto" : "smooth",
+  });
 
   const currentScreen = screenContainer;
   const nextScreen = document.createElement("section");
@@ -280,7 +276,6 @@ const goToScreen = (direction) => {
   window.setTimeout(() => {
     currentScreen.className = "hud-screen";
     currentScreen.innerHTML = nextScreen.innerHTML;
-
     nextScreen.remove();
 
     activeScreenIndex = nextIndex;

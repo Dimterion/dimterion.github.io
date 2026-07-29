@@ -509,7 +509,8 @@ export const siteText = {
           ],
           image: {
             link: "../assets/isp_main_img.png",
-            description: "Image de couverture de la plateforme d'histoires interactives",
+            description:
+              "Image de couverture de la plateforme d'histoires interactives",
           },
         },
         {
@@ -624,7 +625,8 @@ export const siteText = {
           ],
           image: {
             link: "../assets/potw_main_img.png",
-            description: "Image de couverture des aventures textuelles interactives",
+            description:
+              "Image de couverture des aventures textuelles interactives",
           },
         },
       ],

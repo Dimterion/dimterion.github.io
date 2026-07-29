@@ -6,6 +6,7 @@ const localeStorageKey = "hud-language";
 const animationDuration = 220;
 const screenAnimationDuration = 280;
 const mobileBreakpoint = 768;
+const shortViewportHeight = 500;
 
 const metaDescription = document.querySelector('meta[name="description"]');
 
@@ -231,6 +232,33 @@ const setLanguage = (locale) => {
   renderProjects();
 };
 
+const usesSimpleScreenSwap = () =>
+  window.matchMedia(
+    `(max-width: ${mobileBreakpoint}px), (max-height: ${shortViewportHeight}px)`,
+  ).matches;
+
+const usesWindowScroll = () =>
+  window.matchMedia(`(max-height: ${shortViewportHeight}px)`).matches;
+
+const scrollToTop = () => {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+
+  const scrollOptions = {
+    top: 0,
+    left: 0,
+    behavior: prefersReducedMotion ? "auto" : "smooth",
+  };
+
+  if (usesWindowScroll()) {
+    window.scrollTo(scrollOptions);
+    return;
+  }
+
+  scrollArea?.scrollTo(scrollOptions);
+};
+
 const goToScreen = (direction) => {
   const text = getText();
 
@@ -244,17 +272,15 @@ const goToScreen = (direction) => {
       : (activeScreenIndex - 1 + text.screens.items.length) %
         text.screens.items.length;
 
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)",
-  ).matches;
+  if (usesSimpleScreenSwap()) {
+    activeScreenIndex = nextIndex;
+    renderCurrentScreen();
+    scrollToTop();
+    return;
+  }
 
   isScreenAnimating = true;
-
-  scrollArea?.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: prefersReducedMotion ? "auto" : "smooth",
-  });
+  scrollToTop();
 
   const currentScreen = screenContainer;
   const nextScreen = document.createElement("section");

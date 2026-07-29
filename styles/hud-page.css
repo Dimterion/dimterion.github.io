@@ -962,6 +962,46 @@ ul {
   }
 }
 
+@media (max-height: 500px) {
+  body {
+    height: auto;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .hud-page__main {
+    flex: 0 0 auto;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .hud {
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .hud__frame {
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .hud__viewport {
+    overflow: visible;
+  }
+
+  .hud__scroll-area {
+    height: auto;
+    overflow: visible;
+  }
+
+  .hud-screen {
+    height: auto;
+    min-height: auto;
+    position: relative;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hud-page--intro .hud-footer,
   .hud-page--intro .hud-page__main,

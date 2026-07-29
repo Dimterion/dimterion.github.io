@@ -1,3 +1,26 @@
+:root {
+  --color-bg-page: #101010;
+  --color-bg-frame: #1a1a1a;
+  --color-bg-viewport: #111;
+
+  --color-text-main: #f1f1f1;
+  --color-text-strong: #dee2e6;
+  --color-text-muted: #adb5bd;
+  --color-text-dark: #101010;
+  --color-text-dark-muted: #495057;
+
+  --color-panel-light: #ced4da;
+  --color-panel-mid: #bfc5ca;
+  --color-panel-control: #adb5bd;
+
+  --color-border-light: #d2d8dc;
+  --color-border-light-alt: #c7ccd1;
+  --color-border-mid: #8b9196;
+  --color-border-mid-alt: #7a7f84;
+  --color-border-dark: #6f757a;
+  --color-border-dark-alt: #4f555a;
+}
+
 *,
 *::after,
 *::before {

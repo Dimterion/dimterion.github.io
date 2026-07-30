@@ -193,7 +193,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/isp_main_img.png",
+            link: "../assets/images/isp_main_img.png",
             description: "Interactive Stories Platform cover image",
           },
         },
@@ -216,7 +216,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/personal_site_main_img.png",
+            link: "../assets/images/personal_site_main_img.png",
             description: "Dimterion personal site cover image",
           },
         },
@@ -238,7 +238,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/stories_site_main_img.png",
+            link: "../assets/images/stories_site_main_img.png",
             description: "Dimterion's stories site",
           },
         },
@@ -256,7 +256,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/medium_profile_main_img.png",
+            link: "../assets/images/medium_profile_main_img.png",
             description: "Dimterion's Medium blog cover image",
           },
         },
@@ -275,7 +275,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/github_profile_main_img.png",
+            link: "../assets/images/github_profile_main_img.png",
             description: "Dimterion's GitHub profile cover image",
           },
         },
@@ -306,7 +306,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/potw_main_img.png",
+            link: "../assets/images/potw_main_img.png",
             description: "Interactive text adventures cover image",
           },
         },
@@ -508,7 +508,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/isp_main_img.png",
+            link: "../assets/images/isp_main_img.png",
             description:
               "Image de couverture de la plateforme d'histoires interactives",
           },
@@ -532,7 +532,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/personal_site_main_img.png",
+            link: "../assets/images/personal_site_main_img.png",
             description: "Image de couverture du site personnel de Dimterion",
           },
         },
@@ -555,7 +555,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/stories_site_main_img.png",
+            link: "../assets/images/stories_site_main_img.png",
             description: "Image de couverture du site d’histoires de Dimterion",
           },
         },
@@ -574,7 +574,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/medium_profile_main_img.png",
+            link: "../assets/images/medium_profile_main_img.png",
             description: "Image de couverture du blog Medium de Dimterion",
           },
         },
@@ -593,7 +593,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/github_profile_main_img.png",
+            link: "../assets/images/github_profile_main_img.png",
             description: "Image de couverture du profil GitHub de Dimterion",
           },
         },
@@ -624,7 +624,7 @@ export const siteText = {
             },
           ],
           image: {
-            link: "../assets/potw_main_img.png",
+            link: "../assets/images/potw_main_img.png",
             description:
               "Image de couverture des aventures textuelles interactives",
           },

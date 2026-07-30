@@ -1,4 +1,4 @@
-import { siteText } from "../assets/site-text.js";
+import { siteText } from "./data/content.js";
 
 const supportedLocales = ["en", "fr"];
 const localeStorageKey = "hud-language";

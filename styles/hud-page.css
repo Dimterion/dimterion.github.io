@@ -508,6 +508,7 @@ ul {
 
 .hud-footer__label {
   font-size: 1.25rem;
+  font-weight: bold;
   grid-area: label;
   line-height: 1.1;
   margin-top: auto;

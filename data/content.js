@@ -47,7 +47,7 @@ export const siteText = {
       },
 
       portrait: {
-        alt: "Profile picture",
+        alt: "Portrait of Dmitrii / Dimterion",
       },
 
       screenNavigation: {
@@ -362,7 +362,7 @@ export const siteText = {
       },
 
       portrait: {
-        alt: "Photo de profil",
+        alt: "Portrait de Dmitrii / Dimterion",
       },
 
       screenNavigation: {
